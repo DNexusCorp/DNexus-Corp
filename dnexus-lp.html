@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNexus Corp | Enterprise IT & AI Solutions</title>
+    
+    <meta name="description" content="Scale your brand with custom web development and AI-driven video content. Get a free strategy session with DNexus Corp today.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <link rel="icon" type="image/x-icon" href="Assets/dnexus-corp-logo.webp" />
+    <link rel="apple-touch-icon" href="Assets/dnexus-corp-logo.webp" />
+
+    <style>
+        :root {
+            --brand-primary: #6366f1; /* Indigo */
+            --brand-secondary: #8b5cf6; /* Violet */
+            --brand-accent: #38bdf8; /* Cyan */
+            --bg-deep: #020617; /* Void Black */
+            --bg-glass: rgba(15, 23, 42, 0.6);
+            --text-white: #ffffff;
+            --border-glow: rgba(99, 102, 241, 0.5);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-white);
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, .display-font { font-family: 'Space Grotesk', sans-serif; }
+
+        /* --- 1. FIXED HEADER --- */
+        .lp-header {
+            padding: 20px 0;
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            z-index: 1000;
+            background: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+        .logo-img {
+            width: 85px; height: 65px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 0 15px var(--brand-primary);
+        }
+        .logo-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: white;
+            letter-spacing: -0.5px;
+        }
+
+        /* --- 2. PARALLAX CONTAINER --- */
+        /* This wrapper allows us to layer elements */
+        .parallax-wrapper {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /* Background Layer (Farthest) - Moves Slow */
+        .layer-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 120vh;
+            background: url('Assets/Digital-Creative-Workspace.jpeg');
+            background-size: cover;
+            background-position: center;
+            z-index: -3;
+            opacity: 0.3;
+            will-change: transform;
+        }
+
+        /* Mid-Ground Floating Objects (Medium Speed) */
+        .floating-obj {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.6;
+            will-change: transform;
+            pointer-events: none;
+        }
+        
+        .obj-code {
+            top: 15%; left: 5%;
+            width: 150px;
+            filter: drop-shadow(0 0 10px var(--brand-accent));
+            animation: rotateFloat 20s linear infinite;
+        }
+        
+        .obj-ai {
+            top: 40%; right: -5%;
+            width: 200px;
+            filter: drop-shadow(0 0 15px var(--brand-secondary));
+            animation: rotateFloatReverse 25s linear infinite;
+        }
+
+        @keyframes rotateFloat {
+            0% { transform: rotate(0deg) translateY(0); }
+            50% { transform: rotate(10deg) translateY(-20px); }
+            100% { transform: rotate(0deg) translateY(0); }
+        }
+        @keyframes rotateFloatReverse {
+            0% { transform: rotate(0deg) translateY(0); }
+            50% { transform: rotate(-10deg) translateY(20px); }
+            100% { transform: rotate(0deg) translateY(0); }
+        }
+
+        /* --- 3. HERO SECTION --- */
+        .hero-section {
+            padding: 180px 0 120px;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid var(--brand-primary);
+            color: var(--brand-accent);
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: white;
+            text-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
+        }
+
+        .hero-sub {
+            font-size: 1.3rem;
+            color: #e2e8f0;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .btn-cta-primary {
+            background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+            color: white;
+            padding: 16px 45px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: none;
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-cta-primary::before {
+            content: '';
+            position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.5s;
+        }
+        .btn-cta-primary:hover::before { left: 100%; }
+        .btn-cta-primary:hover { transform: scale(1.05); color: white; box-shadow: 0 0 50px rgba(99, 102, 241, 0.8); }
+
+        /* --- 4. SERVICES CAROUSEL --- */
+        .carousel-section {
+            padding: 100px 0;
+            position: relative;
+            z-index: 2;
+            /* Glassmorphism backing */
+            background: linear-gradient(to bottom, transparent, rgba(2,6,23,0.8), transparent);
+        }
+        
+        .carousel-card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 15px;
+            height: 100%;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy effect */
+            cursor: pointer;
+        }
+        .carousel-card:hover {
+            border-color: var(--brand-accent);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(56, 189, 248, 0.2);
+        }
+        
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+            opacity: 0.9;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .card-body { padding: 30px; }
+        .card-title { font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 15px; }
+        .card-text { color: #cbd5e1; margin-bottom: 20px; line-height: 1.6; font-size: 0.95rem; }
+        
+        /* Tech Badge */
+        .tech-badge-sm {
+            display: inline-block;
+            font-size: 0.75rem;
+            background: rgba(255,255,255,0.08);
+            color: var(--brand-accent);
+            padding: 5px 10px;
+            border-radius: 6px;
+            margin-right: 5px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            width: 50px; height: 50px;
+            background: var(--brand-primary);
+            border-radius: 50%;
+            top: 50%; transform: translateY(-50%);
+            opacity: 0.9;
+            box-shadow: 0 0 15px var(--brand-primary);
+        }
+
+        /* --- 5. HOLOGRAPHIC LEAD FORM --- */
+        .lead-section {
+            padding: 120px 0;
+            position: relative;
+            z-index: 5;
+        }
+        
+        .form-card {
+            background: rgba(15, 23, 42, 0.85); /* Deep glass */
+            backdrop-filter: blur(25px);
+            border: 1px solid var(--border-glow);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 0 80px rgba(99, 102, 241, 0.2); /* Outer glow */
+            position: relative; 
+            overflow: hidden;
+        }
+        
+        /* Animated border gradient */
+        .form-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--brand-primary), var(--brand-accent), var(--brand-secondary));
+            animation: shimmer 3s infinite linear;
+            background-size: 200% 100%;
+        }
+        @keyframes shimmer { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
+
+        .form-control-lg {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: white;
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        .form-control-lg:focus {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border-color: var(--brand-accent);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+        }
+        .form-control-lg::placeholder { color: rgba(255,255,255,0.5); }
+
+        select.form-control-lg option { background-color: #020617; color: white; }
+
+        .btn-submit {
+            width: 100%;
+            padding: 18px;
+            background: white;
+            color: var(--bg-deep);
+            font-weight: 800;
+            font-size: 1.2rem;
+            border-radius: 12px;
+            border: none;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-submit:hover {
+            background: var(--brand-accent);
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.6);
+        }
+
+        .legal-link { color: var(--brand-accent); text-decoration: none; cursor: pointer; transition: 0.3s; }
+        .legal-link:hover { color: white; text-shadow: 0 0 10px white; }
+
+        /* --- 6. ANIMATED MODALS --- */
+        .custom-modal .modal-content {
+            background-color: #0f172a;
+            border: 1px solid var(--brand-primary);
+            color: white;
+            border-radius: 20px;
+            box-shadow: 0 0 60px rgba(0,0,0,0.9);
+        }
+        .custom-modal .modal-header { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 25px; }
+        .custom-modal .btn-close { filter: invert(1); opacity: 1; }
+        .custom-modal .modal-body { padding: 30px; line-height: 1.7; color: #cbd5e1; }
+        
+        .modal-feature-list { list-style: none; padding: 0; margin-top: 20px; }
+        .modal-feature-list li { margin-bottom: 12px; padding-left: 25px; position: relative; font-size: 1.05rem; }
+        .modal-feature-list li::before {
+            content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+            color: var(--brand-accent); position: absolute; left: 0; top: 0;
+        }
+
+        /* --- 7. FOOTER --- */
+        .lp-footer {
+            padding: 50px 0;
+            background: black;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+            position: relative; z-index: 10;
+        }
+
+        /* --- RESPONSIVE OPTIMIZATION --- */
+        @media (max-width: 991px) {
+            .hero-title { font-size: 3rem; }
+            .hero-section { padding-top: 140px; }
+            .form-card { padding: 30px; }
+            
+            /* Disable heavy BG parallax on mobile for performance */
+            .layer-bg { background-attachment: scroll; } 
+            
+            /* Floating objects smaller on mobile */
+            .obj-code { width: 80px; top: 10%; left: 0; }
+            .obj-ai { width: 100px; top: 35%; right: -10px; }
+        }
+        @media (max-width: 576px) {
+            .hero-title { font-size: 2.5rem; }
+            .logo-text { font-size: 1.2rem; }
+            .logo-img { width: 50px; height: 50px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="lp-header">
+        <div class="container">
+            <a href="#" class="logo-container">
+                <img src="Assets/dnexus-corp-logo.webp" alt="DNexus Corp Logo" class="logo-img">
+                <!-- <span class="logo-text">DNexus Corp</span> -->
+            </a>
+        </div>
+    </header>
+
+    <div class="parallax-wrapper">
+        
+        <div class="layer-bg" id="parallaxBg"></div>
+
+        <img src="https://cdn-icons-png.flaticon.com/512/2083/2083213.png" class="floating-obj obj-code" id="objCode" alt="Code Icon" style="filter: invert(1);">
+        <img src="https://cdn-icons-png.flaticon.com/512/8637/8637107.png" class="floating-obj obj-ai" id="objAi" alt="AI Icon" style="filter: invert(1) drop-shadow(0 0 5px cyan);">
+
+        <section class="hero-section">
+            <div class="container hero-content-wrapper">
+                <div class="animate__animated animate__fadeInDown">
+                    <span class="hero-badge">Web Development & AI Solutions</span>
+                </div>
+                <h1 class="hero-title animate__animated animate__fadeInUp">
+                    Scale Your Brand with<br>
+                    <span style="color: var(--brand-primary); text-shadow: 0 0 20px var(--brand-primary);">Future-Proof Tech.</span>
+                </h1>
+                <p class="hero-sub animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    We engineer high-performance web platforms and generate viral AI video content to dominate your market. No fluff. Just results.
+                </p>
+                <div class="animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <a href="#lead-form" class="btn-cta-primary">Claim Your Free Strategy Session <i class="fas fa-arrow-right ms-2"></i></a>
+                    <p class="mt-3 small text-white"><i class="fas fa-check-circle text-success me-1"></i> No obligation. 100% Free.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="carousel-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-font text-white display-5 fw-bold">Our Core Capabilities</h2>
+                    <p class="text-white opacity-75">Explore our specialized services.</p>
+                </div>
+
+                <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+                    <div class="carousel-inner">
+                        
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-lg-5 mb-4">
+                                    <div class="carousel-card" data-bs-toggle="modal" data-bs-target="#webModal">
+                                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800" class="card-img-top" alt="Web Dev">
+                                        <div class="card-body">
+                                            <h3 class="card-title">Custom Web Platforms <i class="fas fa-arrow-right float-end small text-muted"></i></h3>
+                                            <p class="card-text">Ditch slow templates. We build bespoke digital experiences using React, Next.js, and Python.</p>
+                                            <div class="mt-3">
+                                                <span class="tech-badge-sm">React</span>
+                                                <span class="tech-badge-sm">Next.js</span>
+                                                <span class="tech-badge-sm">Node.js</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5 mb-4 d-none d-md-block">
+                                    <div class="carousel-card" data-bs-toggle="modal" data-bs-target="#aiModal">
+                                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800" class="card-img-top" alt="AI Video">
+                                        <div class="card-body">
+                                            <h3 class="card-title">AI Video Production <i class="fas fa-arrow-right float-end small text-muted"></i></h3>
+                                            <p class="card-text">Generate months of high-quality social media content in days using our proprietary AI pipeline.</p>
+                                            <div class="mt-3">
+                                                <span class="tech-badge-sm">Gen-AI</span>
+                                                <span class="tech-badge-sm">Auto-Edit</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 col-lg-5 mb-4">
+                                    <div class="carousel-card" data-bs-toggle="modal" data-bs-target="#ecommModal">
+                                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=800" class="card-img-top" alt="E-Commerce">
+                                        <div class="card-body">
+                                            <h3 class="card-title">High-Scale E-Commerce <i class="fas fa-arrow-right float-end small text-muted"></i></h3>
+                                            <p class="card-text">Online stores built to handle thousands of transactions per minute without crashing.</p>
+                                            <div class="mt-3">
+                                                <span class="tech-badge-sm">Shopify Plus</span>
+                                                <span class="tech-badge-sm">Stripe</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5 mb-4 d-none d-md-block">
+                                    <div class="carousel-card" data-bs-toggle="modal" data-bs-target="#mobileModal">
+                                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800" class="card-img-top" alt="Mobile Apps">
+                                        <div class="card-body">
+                                            <h3 class="card-title">Mobile Ecosystems <i class="fas fa-arrow-right float-end small text-muted"></i></h3>
+                                            <p class="card-text">Extend your web platform to iOS and Android with a single, powerful Flutter codebase.</p>
+                                            <div class="mt-3">
+                                                <span class="tech-badge-sm">Flutter</span>
+                                                <span class="tech-badge-sm">Firebase</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lead-form" class="lead-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center mb-5">
+                        <h2 class="display-4 fw-bold text-white mb-3">Ready to Upgrade?</h2>
+                        <p class="lead text-white" style="font-weight: 500;">Fill out the form below. We will analyze your current digital presence and send you a <strong>free growth roadmap</strong> within a hour.</p>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="form-card animate__animated animate__fadeInUp">
+                            <form id="promoForm">
+                                <div class="mb-3">
+                                    <label class="text-white mb-2 ps-1">Full Name</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="e.g. John Doe" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="text-white mb-2 ps-1">Work Email</label>
+                                    <input type="email" class="form-control form-control-lg" placeholder="john@company.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="text-white mb-2 ps-1">Phone Number</label>
+                                    <input type="tel" class="form-control form-control-lg" placeholder="+1 (555) 000-0000" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="text-white mb-2 ps-1">Service Interest</label>
+                                    <select class="form-control form-control-lg" required>
+                                        <option value="" disabled selected>Select an option...</option>
+                                        <option value="Web Development">Custom Web Development</option>
+                                        <option value="AI Video">AI Video Content</option>
+                                        <option value="Both">Both Services</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn-submit">GET FREE CONSULTATION</button>
+                                
+                                <p class="helper-text text-center mt-3"><i class="fas fa-lock me-1"></i> Your data is secure. No spam.</p>
+                                <div class="text-center mt-3">
+                                    <span class="legal-link me-3" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</span>
+                                    <span class="legal-link" data-bs-toggle="modal" data-bs-target="#termsModal">Terms of Use</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+    <footer class="lp-footer">
+        <div class="container">
+            <img src="Assets/dnexus-corp-logo.png" alt="Logo" style="width: 70px; height: 60px; margin-bottom: 15px; border-radius: 5px;">
+            <p class="mb-2">&copy; 2025 DNexus Corp. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade custom-modal" id="webModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable animate__animated animate__zoomIn">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title fw-bold text-white">Custom Web Platforms</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead text-white"><strong>Stop losing customers to slow, generic websites.</strong></p>
+                    <p>In 2025, speed is the #1 ranking factor. We abandon sluggish templates like WordPress to build custom, high-performance web applications using modern architectures.</p>
+                    <ul class="modal-feature-list">
+                        <li><strong>Next.js & React:</strong> Pre-rendered pages that load instantly.</li>
+                        <li><strong>SEO Native:</strong> Built-in schema markup and semantic HTML for Google dominance.</li>
+                        <li><strong>Dynamic CMS:</strong> Easy content management for your marketing team.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-cta-primary w-100" data-bs-dismiss="modal" onclick="location.href='#lead-form'">Request Strategy Call</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade custom-modal" id="aiModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable animate__animated animate__zoomIn">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title fw-bold text-white">AI Video Production</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead text-white"><strong>Viral content at scale, without the studio costs.</strong></p>
+                    <p>Traditional video production is slow and expensive. Our AI pipeline generates high-quality, engaging video ads for TikTok, Reels, and YouTube Shorts in a fraction of the time.</p>
+                    <ul class="modal-feature-list">
+                        <li><strong>Automated Scripting:</strong> AI writes hooks that stop the scroll.</li>
+                        <li><strong>Synthetic Voiceovers:</strong> Professional narration in any language/accent.</li>
+                        <li><strong>Dynamic Visuals:</strong> Stock footage matching and AI-generated imagery.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-cta-primary w-100" data-bs-dismiss="modal" onclick="location.href='#lead-form'">Get Video Roadmap</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade custom-modal" id="ecommModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable animate__animated animate__zoomIn">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title fw-bold text-white">High-Scale E-Commerce</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead text-white"><strong>Storefronts built for Black Friday traffic.</strong></p>
+                    <p>We engineer headless e-commerce solutions that separate the frontend design from the backend logic, resulting in blazing fast shopping experiences.</p>
+                    <ul class="modal-feature-list">
+                        <li><strong>Global Payments:</strong> Integrated Stripe/PayPal with multi-currency support.</li>
+                        <li><strong>Inventory Sync:</strong> Real-time connection to your ERP/Warehouse.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-cta-primary w-100" data-bs-dismiss="modal" onclick="location.href='#lead-form'">Upgrade My Store</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade custom-modal" id="mobileModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable animate__animated animate__zoomIn">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title fw-bold text-white">Mobile Ecosystems</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead text-white"><strong>One Codebase. Two Platforms. Zero Compromise.</strong></p>
+                    <p>We utilize Flutter to build native-quality apps for both iOS and Android simultaneously. This cuts development time in half.</p>
+                    <ul class="modal-feature-list">
+                        <li><strong>Cross-Platform:</strong> Launch on Apple App Store & Google Play together.</li>
+                        <li><strong>Native Features:</strong> Access Camera, GPS, and Push Notifications easily.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-cta-primary w-100" data-bs-dismiss="modal" onclick="location.href='#lead-form'">Build My App</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade custom-modal" id="privacyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable animate__animated animate__fadeInUp">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Privacy Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>At DNexus Corp, your privacy is paramount. This policy outlines how we handle your data.</p>
+                    <h6>1. Data Collection</h6>
+                    <p>We collect only the information necessary to communicate with you regarding your inquiry (Name, Email, Phone).</p>
+                    <h6>2. Usage</h6>
+                    <p>Your data is used solely for providing the requested strategy roadmap. We do not sell data to third parties.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade custom-modal" id="termsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable animate__animated animate__fadeInUp">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Terms of Use</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>By using this landing page, you agree to the following terms:</p>
+                    <h6>1. Intellectual Property</h6>
+                    <p>All content, designs, and code on this page are the exclusive property of DNexus Corp.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        // --- 3D Parallax Logic ---
+        const objCode = document.getElementById('objCode');
+        const objAi = document.getElementById('objAi');
+        const bgLayer = document.getElementById('parallaxBg');
+
+        window.addEventListener('scroll', function() {
+            // Check if user is on Desktop (Disable complex parallax on Mobile for performance)
+            if (window.innerWidth > 991) {
+                const scrollY = window.pageYOffset;
+                
+                // 1. Move Background Slower (Depth)
+                // Using translate3d forces hardware acceleration
+                bgLayer.style.transform = `translate3d(0, ${scrollY * 0.5}px, 0)`;
+
+                // 2. Move Floating Objects (Different Speeds)
+                // Code Icon moves UP as you scroll down (faster)
+                objCode.style.transform = `translate3d(0, -${scrollY * 0.2}px, 0) rotate(-5deg)`;
+                
+                // AI Icon moves DOWN slower
+                objAi.style.transform = `translate3d(0, ${scrollY * 0.1}px, 0) rotate(5deg)`;
+            }
+        });
+
+        // Form Logic
+        $("#promoForm").on("submit", function(e) {
+            e.preventDefault();
+            const btn = $(this).find("button");
+            const originalText = btn.text();
+            btn.text("PROCESSING...").prop("disabled", true);
+            setTimeout(() => {
+                alert("Thank you! Your roadmap request has been received. Check your email shortly.");
+                btn.text(originalText).prop("disabled", false);
+                $(this)[0].reset();
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

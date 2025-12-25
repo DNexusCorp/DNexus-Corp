@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Our Portfolio | Custom Web & Mobile App Projects | DNexus Corp
+    </title>
+
+    <meta
+      name="description"
+      content="Explore the DNexus Corp portfolio. See how we've helped businesses transform with custom websites, mobile apps, and AI-driven video content. View our case studies."
+    />
+    <meta
+      name="keywords"
+      content="web development portfolio, mobile app case studies, software projects, UI/UX design examples, DNexus Corp work"
+    />
+    <meta name="author" content="DNexus Corp Team" />
+
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.dnexuscorp.com/our-works.html" />
+
+    <link rel="icon" type="image/x-icon" href="Assets/dnexus-corp-logo.png" />
+
+    <meta
+      property="og:title"
+      content="Our Work | DNexus Corp Digital Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Browse our latest projects in web development, mobile apps, and AI content creation."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/ganesh4047j/DNexus-Corp/main/Assets/dnexus-corp-smm-image.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://www.dnexuscorp.com/our-works.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Our Work | DNexus Corp Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Explore our latest projects. See how we've helped businesses transform with custom websites, mobile apps, and AI content."
+    />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/ganesh4047j/DNexus-Corp/main/Assets/dnexus-corp-smm-image.webp"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "DNexus Corp Portfolio",
+        "description": "A collection of our best web development and mobile app projects.",
+        "url": "https://www.dnexuscorp.com/our-works.html",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "CreativeWork",
+              "position": 1,
+              "name": "Sportic - Turf Booking App",
+              "description": "Mobile application for turf booking with real-time chat."
+            },
+            {
+              "@type": "CreativeWork",
+              "position": 2,
+              "name": "Rapid GPA Calc",
+              "description": "Mobile calculator for students to track GPA."
+            },
+            {
+              "@type": "CreativeWork",
+              "position": 3,
+              "name": "Bamboo Garden Restaurant",
+              "description": "Restaurant administration website with order tracking."
+            }
+          ]
+        }
+      }
+    </script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+      /* --- CORE STYLES --- */
+      :root {
+        --brand-primary: #6366f1; /* Indigo */
+        --brand-secondary: #8b5cf6; /* Violet */
+        --brand-dark: #0f172a; /* Slate 900 */
+        --brand-light: #f8fafc;
+        --text-main: #334155;
+        --glass-bg: rgba(255, 255, 255, 0.95);
+      }
+
+      body {
+        font-family: "Outfit", sans-serif;
+        color: var(--text-main);
+        background-color: var(--brand-light);
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      .navbar-brand {
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      /* --- NAVBAR --- */
+      .navbar {
+        padding: 20px 0;
+        transition: all 0.3s ease;
+        background: transparent;
+        z-index: 1000;
+      }
+
+      /* Initial State (On Dark Hero) */
+      .navbar .nav-link {
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 500;
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+      .navbar .navbar-brand {
+        color: white;
+        font-weight: 700;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .navbar .nav-link:hover,
+      .navbar .nav-link.active {
+        color: white;
+        opacity: 1;
+      }
+
+      /* Scrolled State */
+      .navbar.scrolled {
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        padding: 15px 0;
+      }
+      .navbar.scrolled .nav-link {
+        color: var(--brand-dark);
+      }
+      .navbar.scrolled .navbar-brand {
+        color: var(--brand-dark);
+      }
+      .navbar.scrolled .nav-link:hover,
+      .navbar.scrolled .nav-link.active {
+        color: var(--brand-primary);
+      }
+
+      /* Logo Style */
+      .logo-img {
+        width: 85px;
+        height: 85px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .btn-primary-custom {
+        background: linear-gradient(
+          135deg,
+          var(--brand-primary),
+          var(--brand-secondary)
+        );
+        border: none;
+        padding: 10px 25px;
+        color: white !important;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+      .btn-primary-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+      }
+
+      /* Toggler Icons */
+      .navbar-toggler {
+        border: none !important;
+      }
+      .navbar-toggler-icon {
+        filter: invert(1); /* White on dark hero */
+      }
+      .navbar.scrolled .navbar-toggler-icon {
+        filter: none; /* Dark on white navbar */
+      }
+
+      /* --- PORTFOLIO HERO --- */
+      .work-hero {
+        padding: 180px 0 100px;
+        position: relative;
+        background: var(--brand-dark);
+        color: white;
+        overflow: hidden;
+        text-align: center;
+      }
+      .work-hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(
+          circle,
+          rgba(99, 102, 241, 0.15) 0%,
+          rgba(0, 0, 0, 0) 70%
+        );
+        z-index: 0;
+      }
+      .hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 20px;
+      }
+      .hero-subtitle {
+        font-size: 1.2rem;
+        color: #94a3b8;
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* --- PROJECT CARDS --- */
+      .project-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        transition: 0.4s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        border-color: var(--brand-primary);
+      }
+
+      .project-header {
+        height: 180px;
+        background: var(--brand-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .project-icon {
+        font-size: 4rem;
+        color: var(--brand-primary);
+        opacity: 0.8;
+        transition: 0.4s;
+      }
+      .project-card:hover .project-icon {
+        transform: scale(1.1);
+        color: var(--brand-secondary);
+      }
+
+      .project-body {
+        padding: 30px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .project-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: var(--brand-dark);
+      }
+      .project-desc {
+        color: #64748b;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        flex-grow: 1;
+      }
+
+      .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 25px;
+      }
+      .tech-badge {
+        background: #f1f5f9;
+        color: #475569;
+        padding: 5px 12px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: white;
+        background: var(--brand-dark);
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: 0.3s;
+        width: fit-content;
+      }
+      .project-link:hover {
+        background: var(--brand-primary);
+        box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+      }
+      .project-link.disabled {
+        background: #cbd5e1;
+        cursor: not-allowed;
+      }
+
+      /* --- FOOTER --- */
+      footer {
+        background: var(--brand-dark);
+        color: white;
+        padding: 80px 0 30px;
+      }
+      .footer-link {
+        color: #94a3b8;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        transition: 0.3s;
+      }
+      .footer-link:hover {
+        color: white;
+      }
+
+      /* --- RESPONSIVE FIXES --- */
+      @media (max-width: 991px) {
+        .hero-title {
+          font-size: 2.5rem;
+        }
+        .work-hero {
+          padding-top: 140px;
+        }
+
+        /* Fix: Navbar collapse needs solid background to not overlap hero */
+        .navbar-collapse {
+          background: rgba(255, 255, 255, 0.98);
+          backdrop-filter: blur(10px);
+          padding: 25px;
+          border-radius: 20px;
+          margin-top: 15px;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+          text-align: center;
+        }
+
+        /* Fix: Nav links must be dark inside the white menu */
+        .navbar .nav-link {
+          color: var(--brand-dark) !important;
+        }
+
+        /* Center and spacing for items */
+        .navbar-nav {
+          gap: 15px;
+        }
+
+        /* Fix: "Get In Touch" Button Alignment */
+        .navbar-nav .nav-item:last-child {
+          margin-top: 15px;
+          margin-left: 0 !important;
+        }
+
+        .btn-primary-custom {
+          width: 100%;
+          max-width: 250px;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .logo-img {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="Assets/dnexus-corp-logo.webp" alt="DNexus Corp Logo" class="logo-img" />
+          <!-- <span>DNexus Corp</span> -->
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="our-works.html">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a href="index.html#contact" class="btn btn-primary-custom"
+                >Get In Touch</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="work-hero">
+      <div class="container">
+        <h1 class="hero-title animate__animated animate__fadeInDown">
+          Featured Projects
+        </h1>
+        <p class="hero-subtitle animate__animated animate__fadeInUp">
+          A showcase of our recent work and creative solutions across web and
+          mobile platforms.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="project-card animate__animated animate__fadeInUp">
+              <div class="project-header">
+                <i
+                  class="fas fa-football-ball project-icon"
+                  aria-hidden="true"
+                ></i>
+                <span class="visually-hidden"
+                  >Sportic Turf Booking App Icon</span
+                >
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Sportic - Turf Booking App</h3>
+                <p class="project-desc">
+                  Comprehensive mobile application for turf booking with
+                  real-time chat facility and advanced booking management
+                  system.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">Flutter</span>
+                  <span class="tech-badge">Firebase</span>
+                  <span class="tech-badge">Real-time Chat</span>
+                </div>
+                <div class="mt-auto">
+                  <span class="project-link disabled"
+                    ><i class="fas fa-code"></i> In Development</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="project-card animate__animated animate__fadeInUp"
+              style="animation-delay: 0.1s"
+            >
+              <div class="project-header">
+                <i
+                  class="fas fa-calculator project-icon"
+                  aria-hidden="true"
+                ></i>
+                <span class="visually-hidden">Rapid GPA Calculator Icon</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Rapid GPA Calc</h3>
+                <p class="project-desc">
+                  A mobile calculator for calculating CGPA and GPA designed
+                  specifically for college students with a user-friendly
+                  interface.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">Flutter</span>
+                  <span class="tech-badge">Dart</span>
+                  <span class="tech-badge">Android</span>
+                </div>
+                <div class="mt-auto">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=edu.rapid.cgpa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    <i class="fab fa-google-play"></i> Play Store
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="project-card animate__animated animate__fadeInUp"
+              style="animation-delay: 0.2s"
+            >
+              <div class="project-header">
+                <i class="fas fa-utensils project-icon" aria-hidden="true"></i>
+                <span class="visually-hidden"
+                  >Bamboo Garden Restaurant Icon</span
+                >
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Bamboo Garden Restaurant</h3>
+                <p class="project-desc">
+                  Restaurant administration website with menu management, order
+                  tracking, and customer management system.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">Bootstrap</span>
+                  <span class="tech-badge">jQuery</span>
+                  <span class="tech-badge">Firebase</span>
+                </div>
+                <div class="mt-auto">
+                  <a
+                    href="https://ganesh4047j.github.io/BambooGarden/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="project-card animate__animated animate__fadeInUp">
+              <div class="project-header">
+                <i class="fas fa-weight project-icon" aria-hidden="true"></i>
+                <span class="visually-hidden">BMI Calculator Icon</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">BMI Calculator App</h3>
+                <p class="project-desc">
+                  Native Android application for calculating Body Mass Index
+                  with health recommendations and history tracking.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">Java</span>
+                  <span class="tech-badge">Android SDK</span>
+                  <span class="tech-badge">XML</span>
+                </div>
+                <div class="mt-auto">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.calc.bmicalculator&pcampaignid=web_share"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    <i class="fab fa-google-play"></i> Play Store
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="project-card animate__animated animate__fadeInUp"
+              style="animation-delay: 0.1s"
+            >
+              <div class="project-header">
+                <i class="fas fa-dna project-icon" aria-hidden="true"></i>
+                <span class="visually-hidden">Revelyx Bio Icon</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Revelyx Bio KFT</h3>
+                <p class="project-desc">
+                  Sophisticated biotech website with cutting-edge design for a
+                  European biotechnology company.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">HTML5</span>
+                  <span class="tech-badge">Bootstrap</span>
+                  <span class="tech-badge">Responsive</span>
+                </div>
+                <div class="mt-auto">
+                  <a
+                    href="https://revelyxbio.eu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    <i class="fas fa-external-link-alt"></i> Visit Site
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="project-card animate__animated animate__fadeInUp"
+              style="animation-delay: 0.2s"
+            >
+              <div class="project-header">
+                <i
+                  class="fas fa-globe-europe project-icon"
+                  aria-hidden="true"
+                ></i>
+                <span class="visually-hidden">Beaulieu Group Icon</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Beaulieu Int. Group</h3>
+                <p class="project-desc">
+                  Professional corporate website for a European client featuring
+                  modern design and seamless user experience.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">HTML5</span>
+                  <span class="tech-badge">CSS3</span>
+                  <span class="tech-badge">jQuery</span>
+                </div>
+                <div class="mt-auto">
+                  <a
+                    href="https://beaulieugroup.eu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    <i class="fas fa-external-link-alt"></i> Visit Site
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="project-card animate__animated animate__fadeInUp">
+              <div class="project-header">
+                <i class="fas fa-cogs project-icon" aria-hidden="true"></i>
+                <span class="visually-hidden">Gruber Tek Icon</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Gruber Tek Team</h3>
+                <p class="project-desc">
+                  Corporate website for a Hungarian engineering client featuring
+                  responsive design and service showcase.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">Bootstrap</span>
+                  <span class="tech-badge">JavaScript</span>
+                  <span class="tech-badge">Responsive</span>
+                </div>
+                <div class="mt-auto">
+                  <a
+                    href="http://grubertekteam.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    <i class="fas fa-external-link-alt"></i> Visit Site
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="project-card animate__animated animate__fadeInUp"
+              style="animation-delay: 0.1s"
+            >
+              <div class="project-header">
+                <i class="fas fa-briefcase project-icon" aria-hidden="true"></i>
+                <span class="visually-hidden">Els Sa Advisor Icon</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Els Sa Advisor Kft</h3>
+                <p class="project-desc">
+                  Professional advisory website for Hungarian client. Clean,
+                  corporate layout with optimized performance.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">HTML5</span>
+                  <span class="tech-badge">CSS3</span>
+                  <span class="tech-badge">Bootstrap</span>
+                </div>
+                <div class="mt-auto">
+                  <a
+                    href="http://elssaadvisor.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    <i class="fas fa-external-link-alt"></i> Visit Site
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="project-card animate__animated animate__fadeInUp"
+              style="animation-delay: 0.2s"
+            >
+              <div class="project-header">
+                <i
+                  class="fas fa-shopping-cart project-icon"
+                  aria-hidden="true"
+                ></i>
+                <span class="visually-hidden">ShopKart Icon</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">ShopKart E-Commerce</h3>
+                <p class="project-desc">
+                  Full-featured e-commerce platform with advanced cart
+                  functionality, user auth, and payment integration.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-badge">React.js</span>
+                  <span class="tech-badge">Django</span>
+                  <span class="tech-badge">PostgreSQL</span>
+                </div>
+                <div class="mt-auto">
+                  <a
+                    href="https://shopkart-7d3j.onrender.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a class="navbar-brand text-white mb-3" href="index.html">
+              <div class="brand-logo-box"><i class="fas fa-cube"></i></div>
+              DNexus Corp
+            </a>
+            <p class="text-white-50">
+              Your partner in digital innovation. We build the future of web,
+              mobile, and media.
+            </p>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h5 class="fw-bold mb-3">Services</h5>
+            <a href="index.html#services" class="footer-link">Web Dev</a>
+            <a href="index.html#services" class="footer-link">Mobile Apps</a>
+            <a href="index.html#services" class="footer-link">AI Video</a>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h5 class="fw-bold mb-3">Company</h5>
+            <a href="about-us.html" class="footer-link">About Us</a>
+            <a href="our-works.html" class="footer-link active text-white"
+              >Works</a
+            >
+            <a href="blog.html" class="footer-link">Blog</a>
+            <a href="index.html#contact" class="footer-link">Contact</a>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="fw-bold mb-3">Contact Us</h5>
+            <p class="text-white-50 mb-2">
+              <i class="fas fa-envelope me-2"></i> hello@dnexus.com
+            </p>
+            <p class="text-white-50">
+              <i class="fas fa-phone-alt me-2"></i> +1 (555) 123-4567
+            </p>
+          </div>
+        </div>
+        <div
+          class="border-top border-secondary mt-5 pt-4 text-center text-white-50 small"
+        >
+          &copy; 2025 DNexus Corp. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Navbar Scroll Effect
+        $(window).scroll(function () {
+          if ($(window).scrollTop() > 50) {
+            $(".navbar").addClass("scrolled");
+          } else {
+            $(".navbar").removeClass("scrolled");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

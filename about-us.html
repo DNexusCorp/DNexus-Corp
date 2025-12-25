@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About DNexus Corp | Digital Transformation Architects</title>
+
+    <meta
+      name="description"
+      content="Meet the team at DNexus Corp. We are digital architects with 5+ years of experience transforming businesses through custom web, mobile, and AI solutions."
+    />
+    <meta
+      name="keywords"
+      content="DNexus Corp team, software agency profile, digital transformation experts, web development company mission, AI tech partners"
+    />
+    <meta name="author" content="DNexus Corp Team" />
+
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.dnexuscorp.com/about-us.html" />
+
+    <link rel="icon" type="image/x-icon" href="Assets/dnexus-corp-logo.png" />
+
+    <meta
+      property="og:title"
+      content="About DNexus Corp | We Build the Future"
+    />
+    <meta
+      property="og:description"
+      content="Strategic partners in digital transformation. Meet the experts behind our award-winning web and mobile solutions."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/ganesh4047j/DNexus-Corp/main/Assets/dnexus-corp-smm-image.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://www.dnexuscorp.com/about-us.html"
+    />
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="DNexus Corp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="About DNexus Corp | Digital Architects"
+    />
+    <meta
+      name="twitter:description"
+      content="Meet the experts behind DNexus Corp. We blend creativity with engineering excellence to build products that matter."
+    />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/ganesh4047j/DNexus-Corp/main/Assets/dnexus-corp-smm-image.webp"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "DNexus Corp",
+          "foundingDate": "2019",
+          "url": "https://www.dnexuscorp.com",
+          "logo": "https://www.dnexuscorp.com/assets/logo.png",
+          "description": "A premium software agency specializing in Web Development, Mobile Apps, and AI Video Content.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chennai",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/dnexuscorp",
+            "https://twitter.com/dnexuscorp",
+            "https://www.instagram.com/dnexuscorp"
+          ],
+          "employee": [
+            {
+              "@type": "Person",
+              "name": "Alex Morgan",
+              "jobTitle": "Founder & CEO"
+            },
+            {
+              "@type": "Person",
+              "name": "Sarah Chen",
+              "jobTitle": "CTO"
+            },
+            {
+              "@type": "Person",
+              "name": "David Kim",
+              "jobTitle": "Creative Director"
+            }
+          ]
+        }
+      }
+    </script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+      /* --- CORE STYLES --- */
+      :root {
+        --brand-primary: #6366f1; /* Indigo */
+        --brand-secondary: #8b5cf6; /* Violet */
+        --brand-dark: #0f172a; /* Slate 900 */
+        --brand-light: #f8fafc;
+        --text-main: #334155;
+        --glass-bg: rgba(255, 255, 255, 0.95);
+      }
+
+      body {
+        font-family: "Outfit", sans-serif;
+        color: var(--text-main);
+        background-color: var(--brand-light);
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      .navbar-brand {
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      /* --- NAVBAR --- */
+      .navbar {
+        padding: 20px 0;
+        transition: all 0.3s ease;
+        background: transparent;
+        z-index: 1000;
+      }
+      .navbar.scrolled {
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        padding: 15px 0;
+      }
+      .navbar-brand {
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: var(--brand-dark);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* LOGO STYLING */
+      .logo-img {
+        width: 85px;
+        height: 85px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .nav-link {
+        color: var(--brand-dark);
+        font-weight: 500;
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--brand-primary);
+      }
+
+      .btn-primary-custom {
+        background: linear-gradient(
+          135deg,
+          var(--brand-primary),
+          var(--brand-secondary)
+        );
+        border: none;
+        padding: 10px 25px;
+        color: white !important;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: transform 0.3s box-shadow 0.3s;
+      }
+      .btn-primary-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        color: white;
+      }
+
+      .navbar-toggler {
+        border: none !important;
+      }
+
+      /* Dark toggle icon for visibility on mobile */
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(15, 23, 42, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      /* --- ABOUT HERO --- */
+      .about-hero {
+        padding: 180px 0 100px;
+        position: relative;
+        background: white;
+        overflow: hidden;
+      }
+      .about-hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(99, 102, 241, 0.05) 0%,
+          rgba(139, 92, 246, 0.05) 100%
+        );
+        z-index: 0;
+        clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+      }
+
+      .about-title {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 20px;
+        color: var(--brand-dark);
+      }
+
+      /* --- STATS COUNTER --- */
+      .stat-box {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        text-align: center;
+        transition: 0.3s;
+      }
+      .stat-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        border-color: var(--brand-primary);
+      }
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--brand-primary);
+        margin-bottom: 5px;
+      }
+      .stat-label {
+        color: #64748b;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+      }
+
+      /* --- VALUES SECTION --- */
+      .value-card {
+        padding: 40px 30px;
+        background: var(--brand-light);
+        border-radius: 20px;
+        height: 100%;
+        transition: 0.3s;
+      }
+      .value-card:hover {
+        background: white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+      .value-icon {
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: 15px;
+        color: var(--brand-primary);
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      /* --- FOOTER --- */
+      footer {
+        background: var(--brand-dark);
+        color: white;
+        padding: 80px 0 30px;
+      }
+      .footer-link {
+        color: #94a3b8;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        transition: 0.3s;
+      }
+      .footer-link:hover {
+        color: white;
+      }
+
+      /* --- RESPONSIVE FIXES FOR MOBILE MENU & BUTTONS --- */
+      @media (max-width: 991px) {
+        .hero-title {
+          font-size: 2.5rem;
+        }
+        .about-hero {
+          padding-top: 140px;
+        }
+        .about-title {
+          font-size: 3rem;
+        }
+        .about-hero::after {
+          display: none;
+        }
+
+        /* Fix Navbar Background overlapping Hero content */
+        .navbar-collapse {
+          background: rgba(255, 255, 255, 0.98);
+          backdrop-filter: blur(10px);
+          padding: 25px;
+          border-radius: 20px;
+          margin-top: 15px;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+          text-align: center;
+        }
+
+        /* Nav Items Spacing */
+        .navbar-nav {
+          gap: 15px;
+        }
+
+        /* Fix "Get In Touch" Button Alignment */
+        .navbar-nav .nav-item:last-child {
+          margin-top: 15px; /* Separate button from links */
+          margin-left: 0 !important; /* Reset desktop margin */
+        }
+
+        .btn-primary-custom {
+          width: 100%; /* Make button full width nicely inside menu */
+          max-width: 250px; /* But not too wide */
+          margin: 0 auto; /* Center it */
+          display: block;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .logo-img {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="Assets/dnexus-corp-logo.webp" alt="DNexus Corp Logo" class="logo-img" />
+          <!-- <span>DNexus Corp</span> -->
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about-us.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="our-works.html">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a href="index.html#contact" class="btn btn-primary-custom"
+                >Get In Touch</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="about-hero">
+      <div class="container position-relative" style="z-index: 2">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <span
+              class="text-primary fw-bold text-uppercase letter-spacing-2 mb-2 d-block"
+              >Who We Are</span
+            >
+            <h1 class="about-title">
+              Digital Architects of the
+              <span style="color: var(--brand-primary)">Future.</span>
+            </h1>
+            <p class="lead text-muted mb-4">
+              DNexus Corp is more than a software company. We are your strategic
+              partners in digital transformation, blending creativity with
+              engineering excellence to build products that matter.
+            </p>
+            <div class="d-flex gap-3">
+              <div class="d-flex align-items-center">
+                <i class="fas fa-check-circle text-success me-2"></i> 5+ Years
+                Exp
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-check-circle text-success me-2"></i> 50+
+                Projects
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5 mt-lg-0">
+            <img
+              src="Assets/dnexus-corp-software-development-team.webp"
+              class="img-fluid rounded-4 shadow-lg animate__animated animate__fadeInUp"
+              alt="DNexus Corp Software Development Team collaborating in office"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-4">Our Mission</h2>
+            <p class="text-muted">
+              To democratize access to high-end digital solutions. We believe
+              that whether you are a startup or an enterprise, you deserve
+              software that is robust, scalable, and beautiful. We exist to
+              bridge the gap between complex technology and seamless user
+              experiences.
+            </p>
+            <p class="text-muted">
+              We don't just write code; we write the future of your business.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-4">Our Vision</h2>
+            <p class="text-muted">
+              To become the global standard for custom software development,
+              where "DNexus Corp Quality" becomes synonymous with perfection,
+              innovation, and reliability in the tech industry.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-3 col-6">
+            <div class="stat-box">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Projects Delivered</div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-box">
+              <div class="stat-number">98%</div>
+              <div class="stat-label">Client Retention</div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-box">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Team Experts</div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="stat-box">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Active Support</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h6 class="text-uppercase text-primary fw-bold">Our DNA</h6>
+          <h2 class="fw-bold display-5">Core Values</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="value-card">
+              <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+              <h4>Innovation First</h4>
+              <p class="text-muted">
+                We don't settle for the status quo. We constantly explore new
+                frameworks (AI, Flutter, React) to give you a competitive edge.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="value-card">
+              <div class="value-icon"><i class="fas fa-search"></i></div>
+              <h4>Radical Transparency</h4>
+              <p class="text-muted">
+                No hidden costs. No technical jargon. We keep you in the loop at
+                every stage of the development lifecycle.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="value-card">
+              <div class="value-icon"><i class="fas fa-rocket"></i></div>
+              <h4>Speed & Quality</h4>
+              <p class="text-muted">
+                We believe you shouldn't have to choose between speed and
+                quality. Our agile workflow ensures we deliver both.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-5"
+      style="
+        background: linear-gradient(
+          135deg,
+          var(--brand-primary),
+          var(--brand-secondary)
+        );
+      "
+    >
+      <div class="container text-center text-white py-5">
+        <h2 class="fw-bold mb-3">Ready to transform your business?</h2>
+        <p class="mb-4 opacity-75">
+          Join the list of successful brands we've helped scale.
+        </p>
+        <a
+          href="index.html#contact"
+          class="btn btn-dark btn-lg px-5 rounded-pill shadow-lg fw-bold"
+          >Let's Talk</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a class="navbar-brand text-white mb-3" href="index.html">
+              <div class="brand-logo-box"><i class="fas fa-cube"></i></div>
+              DNexus Corp
+            </a>
+            <p class="text-white-50">
+              Your partner in digital innovation. We build the future of web,
+              mobile, and media.
+            </p>
+            <div class="d-flex gap-3 mt-4">
+              <a href="#" class="text-white"
+                ><i class="fab fa-twitter fa-lg"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-linkedin fa-lg"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="fab fa-instagram fa-lg"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h5 class="fw-bold mb-3">Services</h5>
+            <a href="index.html#services" class="footer-link">Web Dev</a>
+            <a href="index.html#services" class="footer-link">Mobile Apps</a>
+            <a href="index.html#services" class="footer-link">AI Video</a>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h5 class="fw-bold mb-3">Company</h5>
+            <a href="about-us.html" class="footer-link text-white">About Us</a>
+            <a href="our-works.html" class="footer-link">Works</a>
+            <a href="blog.html" class="footer-link">Blog</a>
+            <a href="index.html#contact" class="footer-link">Contact</a>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="fw-bold mb-3">Contact Us</h5>
+            <p class="text-white-50 mb-2">
+              <i class="fas fa-envelope me-2"></i> hello@dnexus.com
+            </p>
+            <p class="text-white-50">
+              <i class="fas fa-phone-alt me-2"></i> +1 (555) 123-4567
+            </p>
+          </div>
+        </div>
+        <div
+          class="border-top border-secondary mt-5 pt-4 text-center text-white-50 small"
+        >
+          &copy; 2025 DNexus Corp. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Navbar Scroll Effect
+        $(window).scroll(function () {
+          if ($(window).scrollTop() > 50) {
+            $(".navbar").addClass("scrolled");
+          } else {
+            $(".navbar").removeClass("scrolled");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

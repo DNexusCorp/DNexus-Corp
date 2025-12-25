@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insights & Blog | DNexus Corp - Tech Trends & Tutorials</title>
+
+    <meta
+      name="description"
+      content="Read the latest insights on Web Development, Mobile App trends, and AI Video production from the experts at DNexus Corp. Stay ahead of the digital curve."
+    />
+    <meta
+      name="keywords"
+      content="web development blog, mobile app trends 2024, AI video tutorials, software engineering insights, DNexus Corp blog"
+    />
+    <meta name="author" content="DNexus Corp Team" />
+
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.dnexuscorp.com/blog.html" />
+
+    <link rel="icon" type="image/x-icon" href="Assets/dnexus-corp-logo.png" />
+
+    <meta
+      property="og:title"
+      content="DNexus Corp Tech Blog | Insights & Tutorials"
+    />
+    <meta
+      property="og:description"
+      content="Discover the latest in tech. From static site generators to AI video ads, we cover it all."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/ganesh4047j/DNexus-Corp/main/Assets/dnexus-corp-smm-image.webp"
+    />
+    <meta property="og:url" content="https://www.dnexuscorp.com/blog.html" />
+    <meta property="og:type" content="blog" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tech Insights & Blog | DNexus Corp" />
+    <meta
+      name="twitter:description"
+      content="Discover the latest trends in Web Development, Mobile Engineering, and AI-Driven Content Creation. Read our tutorials and guides."
+    />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/ganesh4047j/DNexus-Corp/main/Assets/dnexus-corp-smm-image.webp"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "DNexus Corp Insights",
+        "url": "https://www.dnexuscorp.com/blog.html",
+        "description": "Tech insights and tutorials on web development, mobile apps, and AI.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "DNexus Corp",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.dnexuscorp.com/assets/logo.png"
+          }
+        },
+        "blogPost": [
+          {
+            "@type": "BlogPosting",
+            "headline": "Why Static Sites Are Dominating Modern SEO",
+            "datePublished": "2023-10-24",
+            "author": { "@type": "Organization", "name": "DNexus Corp" }
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "The Future of Ads: AI-Generated Video Content",
+            "datePublished": "2023-11-02",
+            "author": { "@type": "Organization", "name": "DNexus Corp" }
+          }
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.dnexuscorp.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.dnexuscorp.com/blog.html"
+          }
+        ]
+      }
+    </script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+      /* --- CORE STYLES --- */
+      :root {
+        --brand-primary: #6366f1; /* Indigo */
+        --brand-secondary: #8b5cf6; /* Violet */
+        --brand-dark: #0f172a; /* Slate 900 */
+        --brand-light: #f8fafc;
+        --text-main: #334155;
+        --glass-bg: rgba(255, 255, 255, 0.95);
+      }
+
+      body {
+        font-family: "Outfit", sans-serif;
+        color: var(--text-main);
+        background-color: var(--brand-light);
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      .navbar-brand,
+      .modal-title {
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      /* --- 1. NAVBAR (Fixed Visibility) --- */
+      .navbar {
+        padding: 20px 0;
+        transition: all 0.3s ease;
+        background: transparent;
+        z-index: 1000; /* Ensure it stays above Hero */
+      }
+
+      /* Initial State (On Dark Hero) */
+      .navbar .nav-link {
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 500;
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+      .navbar .navbar-brand {
+        color: white;
+        font-weight: 700;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .navbar .nav-link:hover,
+      .navbar .nav-link.active {
+        color: white;
+        opacity: 1;
+      }
+
+      /* Scrolled State (On Light Background) */
+      .navbar.scrolled {
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        padding: 15px 0;
+      }
+      .navbar.scrolled .nav-link {
+        color: var(--brand-dark);
+      }
+      .navbar.scrolled .navbar-brand {
+        color: var(--brand-dark);
+      }
+      .navbar.scrolled .nav-link:hover,
+      .navbar.scrolled .nav-link.active {
+        color: var(--brand-primary);
+      }
+
+      /* Logo Style */
+      .logo-img {
+        width: 85px;
+        height: 85px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .btn-primary-custom {
+        background: linear-gradient(
+          135deg,
+          var(--brand-primary),
+          var(--brand-secondary)
+        );
+        border: none;
+        padding: 10px 25px;
+        color: white !important;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+      .btn-primary-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+      }
+
+      /* Toggler Default (for Dark Hero) */
+      .navbar-toggler {
+        border: none !important;
+      }
+
+      /* Make sure icon is white on dark background */
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
+
+      /* Reset icon to dark when scrolled on white background */
+      .navbar.scrolled .navbar-toggler-icon {
+        filter: none;
+      }
+
+      /* --- 2. HERO SECTION --- */
+      .blog-hero {
+        padding: 180px 0 100px;
+        position: relative;
+        background: var(--brand-dark);
+        color: white;
+        overflow: hidden;
+        text-align: center;
+        z-index: 1;
+      }
+      .blog-hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1200px;
+        height: 1200px;
+        background: radial-gradient(
+          circle,
+          rgba(99, 102, 241, 0.15) 0%,
+          rgba(0, 0, 0, 0) 70%
+        );
+        z-index: -1;
+      }
+      .hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .hero-subtitle {
+        font-size: 1.2rem;
+        color: #94a3b8;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* --- 3. BLOG CARDS --- */
+      .blog-card {
+        border: none;
+        border-radius: 20px;
+        background: white;
+        overflow: hidden;
+        transition: 0.3s;
+        height: 100%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        display: flex;
+        flex-direction: column;
+      }
+      .blog-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      .blog-img-wrapper {
+        position: relative;
+        height: 220px;
+        overflow: hidden;
+      }
+      .blog-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.5s;
+      }
+      .blog-card:hover .blog-img {
+        transform: scale(1.1);
+      }
+
+      .blog-category {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 6px 15px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--brand-primary);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .blog-body {
+        padding: 30px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .blog-meta {
+        font-size: 0.85rem;
+        color: #94a3b8;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .blog-title {
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: var(--brand-dark);
+        line-height: 1.3;
+      }
+      .blog-excerpt {
+        font-size: 0.95rem;
+        color: #64748b;
+        margin-bottom: 25px;
+        flex-grow: 1;
+        line-height: 1.6;
+      }
+
+      .read-more-btn {
+        background: none;
+        border: none;
+        padding: 0;
+        color: var(--brand-primary);
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: 0.3s;
+        cursor: pointer;
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .read-more-btn:hover {
+        gap: 10px;
+        color: var(--brand-secondary);
+      }
+
+      /* --- 4. PAGINATION --- */
+      .pagination {
+        justify-content: center;
+        margin-top: 60px;
+      }
+      .page-link {
+        border: none;
+        margin: 0 6px;
+        border-radius: 12px;
+        color: var(--brand-dark);
+        font-weight: 600;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      .page-link:hover,
+      .page-item.active .page-link {
+        background-color: var(--brand-primary);
+        color: white;
+        box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+      }
+      .page-item.disabled .page-link {
+        opacity: 0.5;
+        background: #f1f5f9;
+      }
+
+      /* --- 5. REDESIGNED MODAL --- */
+      .custom-modal .modal-content {
+        border-radius: 24px;
+        border: none;
+        overflow: hidden;
+        box-shadow: 0 50px 100px rgba(0, 0, 0, 0.2);
+      }
+      .custom-modal .modal-header {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 10;
+        border: none;
+        padding: 0;
+      }
+      .custom-modal .btn-close {
+        background-color: white;
+        opacity: 1;
+        border-radius: 50%;
+        padding: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+      .custom-modal .btn-close:hover {
+        transform: rotate(90deg);
+      }
+
+      .modal-hero-img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+      }
+      .modal-body-content {
+        padding: 40px;
+      }
+      .modal-article-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--brand-dark);
+        margin-bottom: 20px;
+      }
+      .modal-text {
+        color: #475569;
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+      .modal-tags {
+        margin-top: 30px;
+        border-top: 1px solid #e2e8f0;
+        padding-top: 20px;
+      }
+      .modal-tag {
+        background: #f1f5f9;
+        color: #64748b;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      /* --- 6. FOOTER --- */
+      footer {
+        background: var(--brand-dark);
+        color: white;
+        padding: 80px 0 30px;
+      }
+      .footer-link {
+        color: #94a3b8;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        transition: 0.3s;
+      }
+      .footer-link:hover {
+        color: white;
+      }
+
+      /* RESPONSIVE FIXES (Navbar & Hero) */
+      @media (max-width: 991px) {
+        .hero-title {
+          font-size: 2.5rem;
+        }
+        .blog-hero {
+          padding-top: 140px;
+        }
+
+        /* Reduce Modal Image height on mobile so content shows */
+        .modal-hero-img {
+          height: 200px;
+        }
+
+        /* Adjust modal padding on mobile */
+        .modal-body-content {
+          padding: 25px;
+        }
+
+        /* Fix: Navbar collapse needs solid background to not overlap hero */
+        .navbar-collapse {
+          background: rgba(255, 255, 255, 0.98);
+          backdrop-filter: blur(10px);
+          padding: 25px;
+          border-radius: 20px;
+          margin-top: 15px;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+          text-align: center;
+        }
+
+        /* Fix: Nav links must be dark inside the white menu */
+        .navbar .nav-link {
+          color: var(--brand-dark) !important;
+        }
+
+        /* Center and spacing for items */
+        .navbar-nav {
+          gap: 15px;
+        }
+
+        /* Fix: "Get In Touch" Button Alignment */
+        .navbar-nav .nav-item:last-child {
+          margin-top: 15px;
+          margin-left: 0 !important;
+        }
+
+        .btn-primary-custom {
+          width: 100%;
+          max-width: 250px;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .logo-img {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="Assets/dnexus-corp-logo.webp" alt="DNexus Corp Logo" class="logo-img" />
+          <!-- <span>DNexus Corp</span> -->
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a href="index.html#contact" class="btn btn-primary-custom"
+                >Get In Touch</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="blog-hero">
+      <div class="container">
+        <h1 class="hero-title animate__animated animate__fadeInDown">
+          Tech Insights & News
+        </h1>
+        <p class="hero-subtitle animate__animated animate__fadeInUp">
+          Discover the latest trends in Web Development, Mobile Engineering, and
+          AI-Driven Content.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4" id="blog-posts-container">
+
+          <div class="col-md-6 col-lg-4 blog-item">
+            <article class="blog-card">
+              <div class="blog-img-wrapper">
+                <span class="blog-category">Web Dev</span>
+                <img
+                  src="Assets/static-site.webp"
+                  class="blog-img"
+                  alt="Static Site"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <i class="far fa-calendar-alt"></i> Oct 24, 2023
+                </div>
+                <h3 class="blog-title">Static Sites & Modern SEO</h3>
+                <p class="blog-excerpt">
+                  Static sites load faster and are more secure. Learn why
+                  frameworks like Next.js are bringing them back.
+                </p>
+                <button
+                  class="read-more-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogModal"
+                  data-title="Static Sites & Modern SEO"
+                  data-img="Assets/static-site.webp"
+                  data-tag="Web Development"
+                  data-summary="In the early days of the web, everything was static. Then came databases. Now, we are circling back. Static websites are pre-rendered, meaning they don't rely on database queries for every load. This results in lightning-fast performance and top-tier security, which Google's Core Web Vitals algorithms love for SEO ranking. Tools like Next.js and Hugo make building them easier than ever."
+                >
+                  Read Article <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 blog-item">
+            <article class="blog-card">
+              <div class="blog-img-wrapper">
+                <span class="blog-category">AI Video</span>
+                <img
+                  src="Assets/ai-video-content.webp"
+                  class="blog-img"
+                  alt="AI Video Content"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <i class="far fa-calendar-alt"></i> Nov 02, 2023
+                </div>
+                <h3 class="blog-title">AI-Generated Video Ads</h3>
+                <p class="blog-excerpt">
+                  How brands are cutting production costs by 60% using AI to
+                  generate high-converting video ads.
+                </p>
+                <button
+                  class="read-more-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogModal"
+                  data-title="AI-Generated Video Ads"
+                  data-img="Assets/ai-video-content.webp"
+                  data-tag="Artificial Intelligence"
+                  data-summary="Video production used to be expensive and slow. AI tools can now script, storyboard, and generate video content in minutes. This allows brands to test A/B variations of ads rapidly, drastically reducing the cost-per-acquisition while maintaining high engagement rates on platforms like TikTok and Instagram Reels."
+                >
+                  Read Article <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 blog-item">
+            <article class="blog-card">
+              <div class="blog-img-wrapper">
+                <span class="blog-category">Mobile App</span>
+                <img
+                  src="Assets/flutter-react.webp"
+                  class="blog-img"
+                  alt="Mobile App Screen"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <i class="far fa-calendar-alt"></i> Nov 10, 2023
+                </div>
+                <h3 class="blog-title">Flutter vs. React Native 2025</h3>
+                <p class="blog-excerpt">
+                  A deep dive into the performance, developer experience, and
+                  future viability of leading frameworks.
+                </p>
+                <button
+                  class="read-more-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogModal"
+                  data-title="Flutter vs. React Native 2025"
+                  data-img="Assets/flutter-react.webp"
+                  data-tag="Mobile Engineering"
+                  data-summary="The battle for cross-platform dominance continues. React Native remains the choice for web developers moving to mobile due to JavaScript, while Flutter offers superior performance for complex UI animations thanks to Dart. Choosing between them depends on your team's existing skill set and specific performance needs."
+                >
+                  Read Article <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 blog-item">
+            <article class="blog-card">
+              <div class="blog-img-wrapper">
+                <span class="blog-category">UI/UX</span>
+                <img
+                  src="Assets/5-ui-trends.webp"
+                  class="blog-img"
+                  alt="UI Design Screen"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <i class="far fa-calendar-alt"></i> Nov 15, 2023
+                </div>
+                <h3 class="blog-title">5 UI Trends Defining 2025</h3>
+                <p class="blog-excerpt">
+                  From glassmorphism to bold typography, explore visual trends
+                  that engage users.
+                </p>
+                <button
+                  class="read-more-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogModal"
+                  data-title="5 UI Trends Defining 2025"
+                  data-img="Assets/5-ui-trends.webp"
+                  data-tag="UI Design"
+                  data-summary="2025 is seeing a return to 'Neo-Brutalism' and 'Glassmorphism'. Users crave depth and texture after years of flat design. High-contrast typography and micro-interactions are key to retaining user attention in a crowded digital space."
+                >
+                  Read Article <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 blog-item">
+            <article class="blog-card">
+              <div class="blog-img-wrapper">
+                <span class="blog-category">Web Dev</span>
+                <img
+                  src="Assets/optimize-mobile-ecommerce.webp"
+                  class="blog-img"
+                  alt="Mobile Shopping"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <i class="far fa-calendar-alt"></i> Nov 22, 2023
+                </div>
+                <h3 class="blog-title">Optimizing Mobile E-Commerce</h3>
+                <p class="blog-excerpt">
+                  Mobile conversion rates drop with load time. Here are 7
+                  technical fixes to speed up your shop.
+                </p>
+                <button
+                  class="read-more-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogModal"
+                  data-title="Optimizing Mobile E-Commerce"
+                  data-img="Assets/optimize-mobile-ecommerce.webp"
+                  data-tag="E-Commerce"
+                  data-summary="Compressing images to WebP format, using lazy loading, and minimizing JavaScript execution on the main thread are the top three ways to decrease load time and instantly boost mobile sales conversions."
+                >
+                  Read Article <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 blog-item">
+            <article class="blog-card">
+              <div class="blog-img-wrapper">
+                <span class="blog-category">AI Video</span>
+                <img
+                  src="Assets/ai-documentry.webp"
+                  class="blog-img"
+                  alt="Video Production"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <i class="far fa-calendar-alt"></i> Dec 01, 2023
+                </div>
+                <h3 class="blog-title">AI for Corporate Documentaries</h3>
+                <p class="blog-excerpt">
+                  Learn how we use AI to storyboard, edit, and enhance long-form
+                  documentary content for brands.
+                </p>
+                <button
+                  class="read-more-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogModal"
+                  data-title="AI for Corporate Documentaries"
+                  data-img="Assets/ai-documentry.webp"
+                  data-tag="Video Production"
+                  data-summary="AI streamlines the post-production process by automating transcripts, color grading, and b-roll selection. This allows creators to focus on the narrative arc rather than technical tedium, making high-end documentaries accessible to more brands."
+                >
+                  Read Article <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 blog-item">
+            <article class="blog-card">
+              <div class="blog-img-wrapper">
+                <span class="blog-category">Security</span>
+                <img
+                  src="Assets/securing_dynamic_websites_.webp"
+                  class="blog-img"
+                  alt="Cyber Security Lock"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <i class="far fa-calendar-alt"></i> Dec 05, 2023
+                </div>
+                <h3 class="blog-title">Securing Dynamic Websites</h3>
+                <p class="blog-excerpt">
+                  Standard SSL isn't enough. Discover the new security protocols
+                  every dynamic site needs.
+                </p>
+                <button
+                  class="read-more-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogModal"
+                  data-title="Securing Dynamic Websites"
+                  data-img="Assets/securing_dynamic_websites_.webp"
+                  data-tag="Cybersecurity"
+                  data-summary="Implement Content Security Policies (CSP), strict database input validation, and regular dependency audits. These three layers form the baseline defense against modern XSS and injection attacks."
+                >
+                  Read Article <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 blog-item">
+            <article class="blog-card">
+              <div class="blog-img-wrapper">
+                <span class="blog-category">Marketing</span>
+                <img
+                  src="Assets/micro_content_b2b_growth.webp"
+                  class="blog-img"
+                  alt="Marketing Chart"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <i class="far fa-calendar-alt"></i> Dec 12, 2023
+                </div>
+                <h3 class="blog-title">Micro-Content for B2B Growth</h3>
+                <p class="blog-excerpt">
+                  Why 15-second videos generate more leads for B2B software
+                  companies than whitepapers.
+                </p>
+                <button
+                  class="read-more-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogModal"
+                  data-title="Micro-Content for B2B Growth"
+                  data-img="Assets/micro_content_b2b_growth.webp"
+                  data-tag="Marketing Strategy"
+                  data-summary="Decision makers have short attention spans. 15-second explainers that solve a single specific pain point get shared 3x more on LinkedIn than long-form articles. It's about respecting the client's time."
+                >
+                  Read Article <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 blog-item">
+            <article class="blog-card">
+              <div class="blog-img-wrapper">
+                <span class="blog-category">Mobile App</span>
+                <img
+                  src="Assets/free_app_monetization_2025.webp"
+                  class="blog-img"
+                  alt="App Analytics"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <i class="far fa-calendar-alt"></i> Dec 18, 2023
+                </div>
+                <h3 class="blog-title">Free App Monetization</h3>
+                <p class="blog-excerpt">
+                  How to implement Freemium models and In-App Purchases without
+                  ruining the user experience.
+                </p>
+                <button
+                  class="read-more-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogModal"
+                  data-title="Free App Monetization"
+                  data-img="Assets/free_app_monetization_2025.webp"
+                  data-tag="App Strategy"
+                  data-summary="The key is 'Value-Add' not 'Feature-Gate'. Users pay for convenience and personalization. Ensure the free tier is functional enough to build a habit before asking for payment."
+                >
+                  Read Article <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 blog-item">
+            <article class="blog-card">
+              <div class="blog-img-wrapper">
+                <span class="blog-category">Design</span>
+                <img
+                  src="Assets/psychology_of_color_2025.webp"
+                  class="blog-img"
+                  alt="Color Palette"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <i class="far fa-calendar-alt"></i> Dec 22, 2023
+                </div>
+                <h3 class="blog-title">The Psychology of Color</h3>
+                <p class="blog-excerpt">
+                  How color schemes influence user trust and purchasing
+                  decisions in fintech apps.
+                </p>
+                <button
+                  class="read-more-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogModal"
+                  data-title="The Psychology of Color"
+                  data-img="Assets/psychology_of_color_2025.webp"
+                  data-tag="Psychology of Color"
+                  data-summary="Blue instills trust (Banking), Green suggests growth (Investment), and Dark Modes imply luxury (Premium Tiers). Choosing the wrong palette can subconsciously deter users from depositing money."
+                >
+                  Read Article <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 blog-item">
+            <article class="blog-card">
+              <div class="blog-img-wrapper">
+                <span class="blog-category">Tech</span>
+                <img
+                  src="Assets/cloud_vs_on_premise_2024.webp"
+                  class="blog-img"
+                  alt="Cloud Server"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <i class="far fa-calendar-alt"></i> Jan 05, 2024
+                </div>
+                <h3 class="blog-title">Cloud vs. On-Premise 2024</h3>
+                <p class="blog-excerpt">
+                  Breaking down the TCO (Total Cost of Ownership) for scaling
+                  startups.
+                </p>
+                <button
+                  class="read-more-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogModal"
+                  data-title="Cloud vs. On-Premise 2024"
+                  data-img="Assets/cloud_vs_on_premise_2024.webp"
+                  data-tag="DevOps"
+                  data-summary="While Cloud offers flexibility, On-Premise can be 40% cheaper at scale for data-heavy AI startups. We analyze the crossover point where moving off AWS makes financial sense."
+                >
+                  Read Article <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 blog-item">
+            <article class="blog-card">
+              <div class="blog-img-wrapper">
+                <span class="blog-category">Web Dev</span>
+                <img
+                  src="Assets/why_we_switched_to_tailwind.webp"
+                  class="blog-img"
+                  alt="Coding"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <i class="far fa-calendar-alt"></i> Jan 12, 2024
+                </div>
+                <h3 class="blog-title">Why We Switched to Tailwind</h3>
+                <p class="blog-excerpt">
+                  Our development team shares why utility-first CSS is the
+                  future.
+                </p>
+                <button
+                  class="read-more-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#blogModal"
+                  data-title="Why We Switched to Tailwind"
+                  data-img="Assets/why_we_switched_to_tailwind.webp"
+                  data-tag="Frontend"
+                  data-summary="Tailwind CSS reduces context switching between HTML and CSS files, speeding up development by 30%. It also ensures design consistency across large teams better than custom classes."
+                >
+                  Read Article <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <nav aria-label="Blog pagination">
+          <ul class="pagination" id="pagination-controls"></ul>
+        </nav>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a class="navbar-brand text-white mb-3" href="index.html">
+              <div class="brand-logo-box">
+                <i class="fas fa-cube"></i>
+              </div>
+              DNexus Corp
+            </a>
+            <p class="text-white-50">
+              Your partner in digital innovation. We build the future of web,
+              mobile, and media.
+            </p>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h5 class="fw-bold mb-3">Services</h5>
+            <a href="index.html#services" class="footer-link">Web Dev</a>
+            <a href="index.html#services" class="footer-link">Mobile Apps</a>
+            <a href="index.html#services" class="footer-link">AI Video</a>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h5 class="fw-bold mb-3">Company</h5>
+            <a href="about-us.html" class="footer-link">About Us</a>
+            <a href="our-works.html" class="footer-link">Works</a>
+            <a href="blog.html" class="footer-link active text-white">Blog</a>
+            <a href="index.html#contact" class="footer-link">Contact</a>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="fw-bold mb-3">Contact Us</h5>
+            <p class="text-white-50 mb-2">
+              <i class="fas fa-envelope me-2"></i> hello@dnexus.com
+            </p>
+            <p class="text-white-50">
+              <i class="fas fa-phone-alt me-2"></i> +1 (555) 123-4567
+            </p>
+          </div>
+        </div>
+        <div
+          class="border-top border-secondary mt-5 pt-4 text-center text-white-50 small"
+        >
+          &copy; 2025 DNexus Corp. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade custom-modal"
+      id="blogModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-0">
+            <img src="" id="modalImg" class="modal-hero-img" />
+            <div class="modal-body-content">
+              <h3 id="modalTitle" class="modal-article-title"></h3>
+              <p id="modalSummary" class="modal-text"></p>
+
+              <div class="modal-tags">
+                <i class="fas fa-tag me-2 text-primary"></i>
+                <span id="modalTag" class="modal-tag"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // --- NAVBAR SCROLL & VISIBILITY ---
+        $(window).scroll(function () {
+          if ($(window).scrollTop() > 50) {
+            $(".navbar").addClass("scrolled");
+          } else {
+            $(".navbar").removeClass("scrolled");
+          }
+        });
+
+        // --- PAGINATION LOGIC ---
+        const itemsPerPage = 6;
+        const $blogItems = $(".blog-item");
+        const totalItems = $blogItems.length;
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        let currentPage = 1;
+
+        function showPage(page) {
+          $blogItems.hide();
+          const start = (page - 1) * itemsPerPage;
+          const end = start + itemsPerPage;
+          $blogItems.slice(start, end).fadeIn(300);
+
+          // Update Pagination UI
+          $(".page-item").removeClass("active");
+          $(`#page-${page}`).addClass("active");
+
+          // Disable/Enable Prev/Next buttons
+          $("#prev-btn").toggleClass("disabled", page === 1);
+          $("#next-btn").toggleClass("disabled", page === totalPages);
+        }
+
+        function setupPagination() {
+          const $pagination = $("#pagination-controls");
+
+          // Prev Btn
+          $pagination.append(`
+                    <li class="page-item ${
+                      currentPage === 1 ? "disabled" : ""
+                    }" id="prev-btn">
+                        <button class="page-link"><i class="fas fa-chevron-left"></i></button>
+                    </li>
+                `);
+
+          // Numbered Buttons
+          for (let i = 1; i <= totalPages; i++) {
+            $pagination.append(`
+                        <li class="page-item ${
+                          i === 1 ? "active" : ""
+                        }" id="page-${i}">
+                            <button class="page-link page-num" data-page="${i}">${i}</button>
+                        </li>
+                    `);
+          }
+
+          // Next Btn
+          $pagination.append(`
+                    <li class="page-item ${
+                      currentPage === totalPages ? "disabled" : ""
+                    }" id="next-btn">
+                        <button class="page-link"><i class="fas fa-chevron-right"></i></button>
+                    </li>
+                `);
+
+          // Event Listeners
+          $(".page-num").click(function (e) {
+            e.preventDefault();
+            currentPage = $(this).data("page");
+            showPage(currentPage);
+            $("html, body").animate(
+              { scrollTop: $("#blog-posts-container").offset().top - 150 },
+              500
+            );
+          });
+
+          $("#prev-btn").click(function (e) {
+            e.preventDefault();
+            if (currentPage > 1) {
+              currentPage--;
+              showPage(currentPage);
+              $("html, body").animate(
+                { scrollTop: $("#blog-posts-container").offset().top - 150 },
+                500
+              );
+            }
+          });
+
+          $("#next-btn").click(function (e) {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+              currentPage++;
+              showPage(currentPage);
+              $("html, body").animate(
+                { scrollTop: $("#blog-posts-container").offset().top - 150 },
+                500
+              );
+            }
+          });
+
+          showPage(1); // Init
+        }
+
+        setupPagination();
+
+        // --- MODAL LOGIC ---
+        $(".read-more-btn").click(function () {
+          const title = $(this).data("title");
+          const img = $(this).data("img");
+          const summary = $(this).data("summary");
+          const tag = $(this).data("tag");
+
+          $("#modalTitle").text(title);
+          $("#modalImg").attr("src", img);
+          $("#modalSummary").text(summary);
+          $("#modalTag").text(tag);
+        });
+      });
+    </script>
+  </body>
+</html>
