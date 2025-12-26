@@ -11,7 +11,7 @@
     />
     <meta
       name="keywords"
-      content="web development, mobile app development, AI video ads, software firm, digital solutions, custom websites, flutter apps"
+      content="web development, mobile app development, AI video ads, software firm, digital solutions, custom websites, flutter apps, digital marketing, SEO Trichy, SMM services, Email marketing firm"
     />
     <meta name="author" content="DNexus Corp Team" />
 
@@ -37,7 +37,10 @@
       property="og:image"
       content="https://raw.githubusercontent.com/ganesh4047j/DNexus-Corp/main/Assets/dnexus-corp-smm-image.webp"
     />
-    <meta property="og:url" content="https://ganesh4047j.github.io/DNexus-Corp/" />
+    <meta
+      property="og:url"
+      content="https://ganesh4047j.github.io/DNexus-Corp/"
+    />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="DNexus Corp" />
 
@@ -516,11 +519,35 @@
         color: rgba(255, 255, 255, 0.7);
       }
 
-      .consult-form-control:focus {
+      /*.consult-form-control:focus {
         background: rgba(255, 255, 255, 0.3);
         outline: none;
         box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
         color: white;
+      } */
+
+      .consult-form-control:focus {
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        border-color: white;
+      }
+
+      select.consult-form-control {
+        appearance: none; /* Removes default browser arrow */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 15px) center; /* Moves arrow away from the edge */
+        background-size: 20px;
+        padding-right: 40px !important; /* Space for the arrow */
+        cursor: pointer;
+      }
+
+      /* Hover & Focus state for a premium feel */
+      .consult-form-control:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+        border-color: rgba(255, 255, 255, 0.4);
       }
 
       select.consult-form-control {
@@ -529,8 +556,9 @@
       }
 
       select.consult-form-control option {
-        background: white;
-        color: #333;
+        background-color: #ffffff;
+        color: #334155;
+        padding: 10px;
       }
 
       /* Hidden by default, shown via JS */
@@ -648,7 +676,11 @@
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="Assets/dnexus-corp-logo.webp" alt="DNexus Corp Logo" class="logo-img" />
+          <img
+            src="Assets/dnexus-corp-logo.webp"
+            alt="DNexus Corp Logo"
+            class="logo-img"
+          />
           <!-- <span>DNexus Corp</span> -->
         </a>
 
@@ -750,8 +782,8 @@
           <h2 class="fw-bold display-5">Our Core Offerings</h2>
         </div>
 
-        <div class="row g-4">
-          <div class="col-lg-4">
+        <div class="row g-4 justify-content-center">
+          <div class="col-xl-3 col-md-6">
             <div
               class="category-card"
               data-bs-toggle="modal"
@@ -759,9 +791,9 @@
             >
               <div class="cat-icon"><i class="fas fa-code"></i></div>
               <h3>Web Development</h3>
-              <p class="text-muted mb-4">
-                Building robust, scalable, and high-performance websites
-                tailored to your business goals using cutting-edge technologies.
+              <p class="text-muted mb-4 small">
+                High-performance, scalable websites built with modern frameworks
+                to convert visitors into loyal customers.
               </p>
               <button class="card-link-btn">
                 Discover Types <i class="fas fa-arrow-right ms-2"></i>
@@ -769,7 +801,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4">
+          <div class="col-xl-3 col-md-6">
             <div
               class="category-card"
               data-bs-toggle="modal"
@@ -777,9 +809,9 @@
             >
               <div class="cat-icon"><i class="fas fa-mobile-alt"></i></div>
               <h3>Mobile App Dev</h3>
-              <p class="text-muted mb-4">
-                Creating intuitive and engaging mobile applications for iOS and
-                Android that provide seamless user experiences on the go.
+              <p class="text-muted mb-4 small">
+                Custom iOS and Android solutions designed for seamless user
+                interaction and robust performance.
               </p>
               <button class="card-link-btn">
                 See Platforms <i class="fas fa-arrow-right ms-2"></i>
@@ -787,20 +819,38 @@
             </div>
           </div>
 
-          <div class="col-lg-4">
+          <div class="col-xl-3 col-md-6">
             <div
               class="category-card"
               data-bs-toggle="modal"
               data-bs-target="#videoDevModal"
             >
               <div class="cat-icon"><i class="fas fa-photo-video"></i></div>
-              <h3>AI Video & Content</h3>
-              <p class="text-muted mb-4">
-                Producing captivating AI-driven video ads, engaging social
-                content, and compelling documentaries to tell your story.
+              <h3>AI Video Content</h3>
+              <p class="text-muted mb-4 small">
+                Cutting-edge AI video production for social media ads and
+                cinematic brand storytelling.
               </p>
               <button class="card-link-btn">
                 Explore Formats <i class="fas fa-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div
+              class="category-card"
+              data-bs-toggle="modal"
+              data-bs-target="#marketingModal"
+            >
+              <div class="cat-icon"><i class="fas fa-chart-line"></i></div>
+              <h3>Digital Marketing</h3>
+              <p class="text-muted mb-4 small">
+                Strategic growth campaigns that amplify your reach and maximize
+                your return on investment.
+              </p>
+              <button class="card-link-btn">
+                Growth Services <i class="fas fa-arrow-right ms-2"></i>
               </button>
             </div>
           </div>
@@ -1007,7 +1057,6 @@
                     required
                   />
                 </div>
-
                 <div class="col-md-6">
                   <input
                     type="email"
@@ -1017,7 +1066,6 @@
                     required
                   />
                 </div>
-
                 <div class="col-md-6">
                   <input
                     type="tel"
@@ -1041,7 +1089,32 @@
                     <option value="web">Web Development</option>
                     <option value="mobile">Mobile App Development</option>
                     <option value="video">AI Video & Content</option>
+                    <option value="marketing">
+                      Digital Marketing (SEO/SMM)
+                    </option>
                     <option value="general">General Inquiry</option>
+                  </select>
+                </div>
+
+                <div
+                  class="col-12 dynamic-field"
+                  id="marketingSubTypeContainer"
+                  style="display: none"
+                >
+                  <select
+                    class="consult-form-control"
+                    id="marketingSubType"
+                    name="marketingSubType"
+                  >
+                    <option value="" disabled selected>
+                      Select Marketing Service...
+                    </option>
+                    <option value="seo">
+                      Search Engine Optimization (SEO)
+                    </option>
+                    <option value="smm">Social Media Marketing (SMM)</option>
+                    <option value="email">E-mail Marketing</option>
+                    <option value="full_growth">Full Growth Strategy</option>
                   </select>
                 </div>
 
@@ -1061,125 +1134,6 @@
                     <option value="static">Static Website</option>
                     <option value="dynamic">Dynamic Website</option>
                     <option value="ecommerce">E-Commerce</option>
-                  </select>
-                </div>
-
-                <div
-                  class="col-12 dynamic-field"
-                  id="staticTemplateTypeContainer"
-                  style="display: none"
-                >
-                  <select
-                    class="consult-form-control"
-                    id="staticCategory"
-                    name="staticCategory"
-                  >
-                    <option value="" disabled selected>
-                      Select Static Category...
-                    </option>
-                    <option value="Portfolio">Portfolio</option>
-                    <option value="Landing Page">Landing Page</option>
-                    <option value="Corporate">Corporate / Brochure</option>
-                    <option value="Documentation">Documentation / Wiki</option>
-                    <option value="Blog">Blog / News</option>
-                    <option value="Event">Event / Conference</option>
-                    <option value="Resume">Resume / CV</option>
-                    <option value="Others">Others</option>
-                  </select>
-                </div>
-
-                <div
-                  class="col-12 dynamic-field"
-                  id="dynamicTemplateTypeContainer"
-                  style="display: none"
-                >
-                  <select
-                    class="consult-form-control"
-                    id="dynamicCategory"
-                    name="dynamicCategory"
-                  >
-                    <option value="" disabled selected>
-                      Select Dynamic Category...
-                    </option>
-                    <option value="Social Network">Social Network</option>
-                    <option value="Job Board">Job Board / Portal</option>
-                    <option value="Real Estate">Real Estate DB</option>
-                    <option value="LMS">LMS / E-Learning</option>
-                    <option value="Directory">Business Directory</option>
-                    <option value="CMS">Custom CMS / News</option>
-                    <option value="Forum">Community Forum</option>
-                    <option value="Booking">Booking System</option>
-                    <option value="Membership">
-                      Membership / Subscription
-                    </option>
-                    <option value="Auction">Auction Platform</option>
-                    <option value="Others">Others</option>
-                  </select>
-                </div>
-
-                <div
-                  class="col-12 dynamic-field"
-                  id="ecommerceTemplateTypeContainer"
-                  style="display: none"
-                >
-                  <select
-                    class="consult-form-control"
-                    id="ecommCategory"
-                    name="ecommCategory"
-                  >
-                    <option value="" disabled selected>
-                      Select E-Commerce Category...
-                    </option>
-                    <option value="Fashion">Fashion & Apparel</option>
-                    <option value="Electronics">Electronics & Tech</option>
-                    <option value="Digital">Digital Products</option>
-                    <option value="Furniture">Furniture & Decor</option>
-                    <option value="Grocery">Grocery / Food Delivery</option>
-                    <option value="Marketplace">
-                      Multi-Vendor Marketplace
-                    </option>
-                    <option value="Dropshipping">Dropshipping Store</option>
-                    <option value="Subscription Box">Subscription Box</option>
-                    <option value="Others">Others</option>
-                  </select>
-                </div>
-
-                <div
-                  class="col-12 dynamic-field"
-                  id="mobileSubTypeContainer"
-                  style="display: none"
-                >
-                  <select
-                    class="consult-form-control"
-                    id="mobileSubType"
-                    name="mobileSubType"
-                  >
-                    <option value="" disabled selected>
-                      Select App Type...
-                    </option>
-                    <option value="native">Native (iOS/Android)</option>
-                    <option value="cross">
-                      Cross-Platform (Flutter/React Native)
-                    </option>
-                  </select>
-                </div>
-
-                <div
-                  class="col-12 dynamic-field"
-                  id="videoSubTypeContainer"
-                  style="display: none"
-                >
-                  <select
-                    class="consult-form-control"
-                    id="videoSubType"
-                    name="videoSubType"
-                  >
-                    <option value="" disabled selected>
-                      Select Content Type...
-                    </option>
-                    <option value="ads">AI Video Ads</option>
-                    <option value="content">Content Videos</option>
-                    <option value="documentary">Documentary</option>
                   </select>
                 </div>
 
@@ -1237,6 +1191,7 @@
             <a href="#services" class="footer-link">Web Dev</a>
             <a href="#services" class="footer-link">Mobile Apps</a>
             <a href="#services" class="footer-link">AI Video</a>
+            <a href="#services" class="footer-link">Digital Marketing</a>
           </div>
 
           <div class="col-lg-2 col-6">
@@ -1293,6 +1248,74 @@
             >
               Close
             </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="marketingModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-lg animate__animated animate__fadeInUp"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center">
+              <div class="modal-icon-header">
+                <i class="fas fa-bullhorn"></i>
+              </div>
+              <h4 class="modal-title fw-bold mb-0">Marketing & Growth</h4>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted mb-4">
+              We use data-driven strategies to ensure your brand reaches the
+              right audience at the right time.
+            </p>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="type-item h-100">
+                  <div class="type-icon"><i class="fas fa-search"></i></div>
+                  <h5 class="fw-bold">SEO (Search Engine Optimization)</h5>
+                  <p class="small text-muted mb-0">
+                    Rank higher on search engines with expert keyword
+                    optimization and technical SEO.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="type-item h-100">
+                  <div class="type-icon"><i class="fab fa-facebook-f"></i></div>
+                  <h5 class="fw-bold">SMM (Social Media Marketing)</h5>
+                  <p class="small text-muted mb-0">
+                    Engage your community through targeted Social Media
+                    Marketing and ad management.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="type-item h-100">
+                  <div class="type-icon">
+                    <i class="fas fa-envelope-open-text"></i>
+                  </div>
+                  <h5 class="fw-bold">Email Marketing</h5>
+                  <p class="small text-muted mb-0">
+                    Automated drip campaigns and newsletters designed to boost
+                    customer retention.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1867,9 +1890,7 @@
 
         // --- CONDITIONAL FORM LOGIC ---
         $("#mainServiceSelect").change(function () {
-          // Hide all dynamic fields first
-          $(".dynamic-field").hide();
-
+          $(".dynamic-field").hide(); // Hide all
           const selectedValue = $(this).val();
 
           if (selectedValue === "web") {
@@ -1878,6 +1899,8 @@
             $("#mobileSubTypeContainer").fadeIn();
           } else if (selectedValue === "video") {
             $("#videoSubTypeContainer").fadeIn();
+          } else if (selectedValue === "marketing") {
+            $("#marketingSubTypeContainer").fadeIn(); // New Logic
           }
         });
 
