@@ -101,6 +101,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
+
     <style>
       /* --- CORE STYLES --- */
       :root {
@@ -264,7 +267,7 @@
       }
       .project-card:hover {
         transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 15px 35px rgba(99, 102, 241, 0.15);
         border-color: var(--brand-primary);
       }
 
@@ -277,13 +280,16 @@
         position: relative;
         overflow: hidden;
       }
+      .project-header img {
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      }
       .project-icon {
         font-size: 4rem;
         color: var(--brand-primary);
         opacity: 0.8;
         transition: 0.4s;
       }
-      .project-card:hover .project-icon {
+      .project-card:hover .project-icon .project-header img {
         transform: scale(1.1);
         color: var(--brand-secondary);
       }
@@ -414,13 +420,38 @@
           height: 70px;
         }
       }
+
+      /* Filter Buttons Styling */
+      .filter-btn {
+        border: 1px solid var(--brand-primary);
+        background: transparent;
+        color: var(--brand-primary);
+        padding: 8px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+      .filter-btn.active,
+      .filter-btn:hover {
+        background: var(--brand-primary);
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+      }
+      /* Portfolio Filter Smoothing */
+      .portfolio-item {
+        transition: transform 0.4s ease, opacity 0.4s ease;
+      }
     </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="Assets/dnexus-corp-logo.webp" alt="DNexus Corp Logo" class="logo-img" />
+          <img
+            src="Assets/dnexus-corp-logo.webp"
+            alt="DNexus Corp Logo"
+            class="logo-img"
+          />
           <!-- <span>DNexus Corp</span> -->
         </a>
         <button
@@ -461,23 +492,50 @@
       </div>
     </nav>
 
-    <section class="work-hero">
-      <div class="container">
-        <h1 class="hero-title animate__animated animate__fadeInDown">
-          Featured Projects
-        </h1>
-        <p class="hero-subtitle animate__animated animate__fadeInUp">
-          A showcase of our recent work and creative solutions across web and
-          mobile platforms.
+    <section class="work-hero position-relative overflow-hidden">
+      <div class="container position-relative" style="z-index: 2">
+        <h1 class="hero-title" data-aos="fade-down">Featured Projects</h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+          Innovative digital solutions crafted with precision and purpose.
         </p>
       </div>
     </section>
 
-    <section class="py-5">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-6">
-            <div class="project-card animate__animated animate__fadeInUp">
+    <section class="py-5 position-relative overflow-hidden">
+      <div
+        class="parallax d-none d-lg-block"
+        data-rellax-speed="-1"
+        style="
+          position: absolute;
+          top: 10%;
+          left: -5%;
+          font-size: 12rem;
+          color: rgba(99, 102, 241, 0.03);
+          font-weight: 900;
+          pointer-events: none;
+          z-index: 0;
+        "
+      >
+        PORTFOLIO
+      </div>
+
+      <div class="container position-relative" style="z-index: 1">
+        <div
+          class="d-flex flex-wrap justify-content-center gap-3 mb-5"
+          data-aos="fade-up"
+        >
+          <button class="filter-btn active" data-filter="all">All Work</button>
+          <button class="filter-btn" data-filter="web">Websites</button>
+          <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+        </div>
+
+        <div class="row g-4" id="portfolio-grid">
+          <div
+            class="col-lg-4 col-md-6 portfolio-item mobile"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="project-card">
               <div class="project-header">
                 <i
                   class="fas fa-football-ball project-icon"
@@ -508,11 +566,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div
-              class="project-card animate__animated animate__fadeInUp"
-              style="animation-delay: 0.1s"
-            >
+          <div
+            class="col-lg-4 col-md-6 portfolio-item mobile"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-card">
               <div class="project-header">
                 <i
                   class="fas fa-calculator project-icon"
@@ -546,11 +605,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div
-              class="project-card animate__animated animate__fadeInUp"
-              style="animation-delay: 0.2s"
-            >
+          <div
+            class="col-lg-4 col-md-6 portfolio-item web"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="project-card">
               <div class="project-header">
                 <i class="fas fa-utensils project-icon" aria-hidden="true"></i>
                 <span class="visually-hidden"
@@ -582,8 +642,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="project-card animate__animated animate__fadeInUp">
+          <div
+            class="col-lg-4 col-md-6 portfolio-item mobile"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="project-card">
               <div class="project-header">
                 <i class="fas fa-weight project-icon" aria-hidden="true"></i>
                 <span class="visually-hidden">BMI Calculator Icon</span>
@@ -613,11 +677,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div
-              class="project-card animate__animated animate__fadeInUp"
-              style="animation-delay: 0.1s"
-            >
+          <div
+            class="col-lg-4 col-md-6 portfolio-item web"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-card">
               <div class="project-header">
                 <i class="fas fa-dna project-icon" aria-hidden="true"></i>
                 <span class="visually-hidden">Revelyx Bio Icon</span>
@@ -647,11 +712,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div
-              class="project-card animate__animated animate__fadeInUp"
-              style="animation-delay: 0.2s"
-            >
+          <div
+            class="col-lg-4 col-md-6 portfolio-item web"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="project-card">
               <div class="project-header">
                 <i
                   class="fas fa-globe-europe project-icon"
@@ -684,8 +750,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="project-card animate__animated animate__fadeInUp">
+          <div
+            class="col-lg-4 col-md-6 portfolio-item web"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="project-card">
               <div class="project-header">
                 <i class="fas fa-cogs project-icon" aria-hidden="true"></i>
                 <span class="visually-hidden">Gruber Tek Icon</span>
@@ -715,11 +785,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div
-              class="project-card animate__animated animate__fadeInUp"
-              style="animation-delay: 0.1s"
-            >
+          <div
+            class="col-lg-4 col-md-6 portfolio-item web"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-card">
               <div class="project-header">
                 <i class="fas fa-briefcase project-icon" aria-hidden="true"></i>
                 <span class="visually-hidden">Els Sa Advisor Icon</span>
@@ -749,11 +820,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div
-              class="project-card animate__animated animate__fadeInUp"
-              style="animation-delay: 0.2s"
-            >
+          <div
+            class="col-lg-4 col-md-6 portfolio-item web"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="project-card">
               <div class="project-header">
                 <i
                   class="fas fa-shopping-cart project-icon"
@@ -805,13 +877,22 @@
               <!-- <a href="#" class="text-white"
                 ><i class="fab fa-twitter fa-lg"></i
               ></a> -->
-              <a href="https://www.facebook.com/profile.php?id=61585085889084" target="_blank" class="text-white"
+              <a
+                href="https://www.facebook.com/profile.php?id=61585085889084"
+                target="_blank"
+                class="text-white"
                 ><i class="fab fa-facebook fa-lg"></i
               ></a>
-              <a href="https://www.linkedin.com/in/dnexus-corp-8b19563a2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BZ%2Fd%2B%2BbwNQGWDx24qwjdAVw%3D%3D" target="_blank" class="text-white"
+              <a
+                href="https://www.linkedin.com/in/dnexus-corp-8b19563a2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BZ%2Fd%2B%2BbwNQGWDx24qwjdAVw%3D%3D"
+                target="_blank"
+                class="text-white"
                 ><i class="fab fa-linkedin fa-lg"></i
               ></a>
-              <a href="https://www.instagram.com/dnexuscorp?igsh=cGNwYmMxdTV0OGlp" target="_blank" class="text-white"
+              <a
+                href="https://www.instagram.com/dnexuscorp?igsh=cGNwYmMxdTV0OGlp"
+                target="_blank"
+                class="text-white"
                 ><i class="fab fa-instagram fa-lg"></i
               ></a>
             </div>
@@ -820,8 +901,12 @@
             <h5 class="fw-bold mb-3">Services</h5>
             <a href="index.html#services" class="footer-link">Web Dev</a>
             <a href="index.html#services" class="footer-link">Mobile Apps</a>
-            <a href="index.html#services" class="footer-link">AI Video Content</a>
-            <a href="index.html#services" class="footer-link">Digital Marketing</a>
+            <a href="index.html#services" class="footer-link"
+              >AI Video Content</a
+            >
+            <a href="index.html#services" class="footer-link"
+              >Digital Marketing</a
+            >
           </div>
           <div class="col-lg-2 col-6">
             <h5 class="fw-bold mb-3">Company</h5>
@@ -851,15 +936,57 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
+
     <script>
       $(document).ready(function () {
-        // Navbar Scroll Effect
+        // 1. Navbar Scroll Effect
         $(window).scroll(function () {
           if ($(window).scrollTop() > 50) {
             $(".navbar").addClass("scrolled");
           } else {
             $(".navbar").removeClass("scrolled");
           }
+        });
+
+        // 2. Initialize AOS (Animate on Scroll)
+        AOS.init({
+          duration: 1000,
+          once: true,
+          offset: 100,
+          easing: "ease-in-out",
+        });
+
+        // 3. Initialize Rellax (Parallax)
+        // Only initialized on screens wider than 992px for better mobile performance
+        if ($(window).width() > 992) {
+          var rellax = new Rellax(".parallax");
+        }
+
+        // 4. Portfolio Filtering Logic
+        $(".filter-btn").on("click", function () {
+          // Toggle Active States
+          $(".filter-btn").removeClass("active");
+          $(this).addClass("active");
+
+          const filterValue = $(this).attr("data-filter");
+          const $portfolioItems = $(".portfolio-item");
+
+          // Use a promise to ensure animations are clean
+          $portfolioItems
+            .fadeOut(300)
+            .promise()
+            .done(function () {
+              if (filterValue === "all") {
+                $portfolioItems.fadeIn(400);
+              } else {
+                $(".portfolio-item." + filterValue).fadeIn(400);
+              }
+
+              // Recalculate AOS positions for the newly visible items
+              AOS.refresh();
+            });
         });
       });
     </script>
