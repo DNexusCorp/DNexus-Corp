@@ -3,120 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found | DNexus Corp</title>
+    <title>Lost in Space | DNexus Corp</title>
     
     <meta name="robots" content="noindex, follow">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --brand-primary: #6366f1;
             --brand-secondary: #8b5cf6;
             --brand-dark: #0f172a;
-            --brand-light: #f8fafc;
+            --deep-space: #020617;
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Outfit', sans-serif;
-            background-color: var(--brand-light);
-            color: #334155;
+            background-color: var(--deep-space);
+            color: white;
             height: 100vh;
+            width: 100vw;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            perspective: 1000px; /* Essential for 3D parallax */
         }
 
-        h1 { font-family: 'Space Grotesk', sans-serif; }
+        /* --- PARALLAX ENGINE --- */
+        .parallax-scene {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-style: preserve-3d;
+            transition: transform 0.1s ease-out;
+        }
 
-        .error-container {
+        /* Background Stars Layer */
+        .layer-bg {
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px);
+            background-size: 550px 550px, 350px 350px;
+            transform: translateZ(-200px) scale(2);
+            opacity: 0.3;
+            animation: starsRotate 200s linear infinite;
+        }
+
+        /* Middle Layer: Planets/Shapes */
+        .layer-mid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: translateZ(-100px);
+            pointer-events: none;
+        }
+
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(2px);
+            box-shadow: inset -20px -20px 50px rgba(0,0,0,0.5);
+        }
+
+        .planet-1 { 
+            top: 15%; left: 10%; width: 120px; height: 120px; 
+            background: linear-gradient(45deg, var(--brand-primary), #3b82f6);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .planet-2 { 
+            bottom: 20%; right: 15%; width: 80px; height: 80px; 
+            background: linear-gradient(45deg, var(--brand-secondary), #ec4899);
+            animation: float 6s ease-in-out infinite reverse;
+        }
+
+        /* Foreground Layer: Content */
+        .error-content {
+            transform: translateZ(50px);
             text-align: center;
-            padding: 40px;
+            z-index: 10;
+            padding: 20px;
         }
 
         .error-code {
-            font-size: 8rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(8rem, 20vw, 15rem);
             font-weight: 700;
-            background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+            line-height: 0.8;
+            background: linear-gradient(180deg, #fff 30%, var(--brand-primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-height: 1;
-            margin-bottom: 20px;
+            filter: drop-shadow(0 0 30px rgba(99, 102, 241, 0.4));
+            position: relative;
+            animation: glitch 3s infinite;
+        }
+
+        .astronaut {
+            position: absolute;
+            font-size: 4rem;
+            top: -20%;
+            right: -10%;
+            transform: rotate(15deg);
+            animation: astroFloat 10s ease-in-out infinite;
         }
 
         .error-title {
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 5vw, 3rem);
             font-weight: 700;
-            color: var(--brand-dark);
-            margin-bottom: 15px;
+            margin-top: 20px;
+            letter-spacing: 2px;
         }
 
         .error-desc {
             font-size: 1.1rem;
-            color: #64748b;
-            max-width: 500px;
-            margin: 0 auto 40px;
+            color: #94a3b8;
+            max-width: 550px;
+            margin: 20px auto 40px;
         }
 
         .btn-home {
-            background: var(--brand-dark);
-            color: white;
-            padding: 12px 30px;
+            background: white;
+            color: var(--brand-dark);
+            padding: 15px 40px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
+            font-weight: 700;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            border: 2px solid white;
         }
 
         .btn-home:hover {
-            background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+            background: transparent;
             color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+            transform: scale(1.1) rotate(-2deg);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
         }
 
-        /* Abstract Shapes */
-        .shape {
-            position: absolute;
-            filter: blur(50px);
-            z-index: -1;
-            opacity: 0.5;
+        /* --- ANIMATIONS --- */
+        @keyframes starsRotate {
+            from { transform: translateZ(-200px) rotate(0deg); }
+            to { transform: translateZ(-200px) rotate(360deg); }
         }
-        .shape-1 {
-            top: -10%; left: -10%; width: 500px; height: 500px;
-            background: rgba(99, 102, 241, 0.2);
-            border-radius: 50%;
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-40px) rotate(10deg); }
         }
-        .shape-2 {
-            bottom: -10%; right: -10%; width: 400px; height: 400px;
-            background: rgba(139, 92, 246, 0.2);
-            border-radius: 50%;
+
+        @keyframes astroFloat {
+            0%, 100% { transform: translate(0, 0) rotate(15deg); }
+            50% { transform: translate(-30px, 50px) rotate(-10deg); }
+        }
+
+        @keyframes glitch {
+            0% { transform: skew(0deg); }
+            2% { transform: skew(10deg); opacity: 0.8; }
+            4% { transform: skew(-10deg); }
+            6% { transform: skew(0deg); }
+            100% { transform: skew(0deg); }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .planet-1 { width: 60px; height: 60px; left: 5%; }
+            .planet-2 { width: 40px; height: 40px; right: 5%; }
+            .astronaut { font-size: 2.5rem; top: -10%; }
         }
     </style>
 </head>
 <body>
 
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
+    <div class="parallax-scene" id="scene">
+        <div class="layer-bg"></div>
 
-    <div class="container">
-        <div class="error-container">
-            <div class="error-code">404</div>
-            <h1 class="error-title">Page Not Found</h1>
+        <div class="layer-mid">
+            <div class="planet planet-1"></div>
+            <div class="planet planet-2"></div>
+        </div>
+
+        <div class="error-content container">
+            <div class="position-relative d-inline-block">
+                <div class="error-code">404</div>
+                <div class="astronaut">👨‍🚀</div>
+            </div>
+            
+            <h1 class="error-title">LOST IN THE VOID</h1>
             <p class="error-desc">
-                Oops! The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+                The coordinates you entered don't exist in this quadrant. You've drifted too far from the DNexus Corp mainframe.
             </p>
-            <a href="index.html" class="btn-home">
-                <i class="fas fa-arrow-left"></i> Back to Home
+            
+            <a href="https://dnexuscorp.com/" class="btn-home">
+                <i class="fas fa-rocket"></i> ABORT MISSION & GO HOME
             </a>
         </div>
     </div>
+
+    <script>
+        // Intensive Mouse Parallax Logic
+        const scene = document.getElementById('scene');
+        
+        document.addEventListener('mousemove', (e) => {
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+            
+            scene.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+
+        // Mobile Gyroscope Parallax (Optional - works on supported mobile browsers)
+        if (window.DeviceOrientationEvent) {
+            window.addEventListener('deviceorientation', (e) => {
+                const x = e.beta / 4; // Tilt front/back
+                const y = e.gamma / 4; // Tilt left/right
+                scene.style.transform = `rotateY(${y}deg) rotateX(${x}deg)`;
+            });
+        }
+    </script>
 
 </body>
 </html>

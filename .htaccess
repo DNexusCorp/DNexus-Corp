@@ -1,1 +1,4 @@
-ErrorDocument 404 /custom-404-page.html
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    ErrorDocument 404 /custom-404-page.html
+</IfModule>
