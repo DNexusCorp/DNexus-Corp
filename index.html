@@ -1247,6 +1247,38 @@
                   </select>
                 </div>
 
+                <div class="col-12 dynamic-field" id="mobileSubTypeContainer">
+                  <select class="consult-form-control" name="mobileSubType">
+                    <option value="" disabled selected>
+                      Select Mobile Platform...
+                    </option>
+                    <option value="iOS">Native iOS (Flutter)</option>
+                    <option value="Android">
+                      Native Android (Java/Flutter)
+                    </option>
+                    <option value="Cross-Platform">
+                      Cross-Platform (Flutter)
+                    </option>
+                  </select>
+                </div>
+
+                <div class="col-12 dynamic-field" id="videoSubTypeContainer">
+                  <select class="consult-form-control" name="videoSubType">
+                    <option value="" disabled selected>
+                      Select Video Format...
+                    </option>
+                    <option value="AI Generated Video Ads">
+                      AI Generated Video Ads
+                    </option>
+                    <option value="AI Generated Cinematic Storytelling">
+                      AI Generated Cinematic Storytelling
+                    </option>
+                    <option value="AI Generated Brand Documentary">
+                      AI Generated Brand Documentary
+                    </option>
+                  </select>
+                </div>
+
                 <div
                   class="col-12 dynamic-field"
                   id="marketingSubTypeContainer"
@@ -1289,6 +1321,99 @@
                     <option value="Static Website">Static Website</option>
                     <option value="Dynamic Website">Dynamic Website</option>
                     <option value="E-Commerce">E-Commerce</option>
+                  </select>
+                </div>
+
+                <div
+                  class="col-12 dynamic-field"
+                  id="staticTemplateTypeContainer"
+                  style="display: none"
+                >
+                  <select
+                    class="consult-form-control"
+                    id="staticTemplateTypeContainer"
+                    name="staticCategory"
+                  >
+                    <option value="" disabled selected>
+                      Select Static Website Type...
+                    </option>
+                    <option value="Portfolio Website">Portfolio Website</option>
+                    <option value="SLanding Page">Landing Page</option>
+                    <option value="Corporate / Brochure">
+                      Corporate / Brochure
+                    </option>
+                    <option value="Documentation Website">
+                      Documentation Website
+                    </option>
+                    <option value="Blog / News Website">
+                      Blog / News Website
+                    </option>
+                    <option value="Event / Conference Website">
+                      Event / Conference Website
+                    </option>
+                    <option value="Resume / CV Website">
+                      Resume / CV Website
+                    </option>
+                  </select>
+                </div>
+
+                <div
+                  class="col-12 dynamic-field"
+                  id="dynamicTemplateTypeContainer"
+                  style="display: none"
+                >
+                  <select
+                    class="consult-form-control"
+                    id="dynamicTemplateTypeContainer"
+                    name="dynamicCategory"
+                  >
+                    <option value="" disabled selected>
+                      Select Dynamic Website Type...
+                    </option>
+                    <option value="Social Network Website">
+                      Social Network Website
+                    </option>
+                    <option value="Job Board Website">Job Board Website</option>
+                    <option value="Real Estate Portal Website">
+                      Real Estate Portal Website
+                    </option>
+                    <option value="LMS / E-Learning Website">
+                      LMS / E-Learning Website
+                    </option>
+                    <option value="Business Directory Website">
+                      Business Directory Website
+                    </option>
+                  </select>
+                </div>
+
+                <div
+                  class="col-12 dynamic-field"
+                  id="ecommerceTemplateTypeContainer"
+                  style="display: none"
+                >
+                  <select
+                    class="consult-form-control"
+                    id="ecommerceTemplateTypeContainer"
+                    name="ecommCategory"
+                  >
+                    <option value="" disabled selected>
+                      Select E-Commerce Website Type...
+                    </option>
+                    <option value="Fashion & Apparel Website">
+                      Fashion & Apparel Website
+                    </option>
+                    <option value="Electronics & Gadgets Website">
+                      Electronics & Gadgets Website
+                    </option>
+                    <option value="Digital Products Website">
+                      Digital Products Website
+                    </option>
+                    <option value="Marketplace Website">
+                      Marketplace Website
+                    </option>
+                    <option value="Subscription Box Website">
+                      Subscription Box Website
+                    </option>
                   </select>
                 </div>
 
@@ -2084,13 +2209,13 @@
           $(".dynamic-field").hide(); // Hide all
           const selectedValue = $(this).val();
 
-          if (selectedValue === "web") {
+          if (selectedValue === "Web Development") {
             $("#webSubTypeContainer").fadeIn();
-          } else if (selectedValue === "mobile") {
+          } else if (selectedValue === "Mobile App Development") {
             $("#mobileSubTypeContainer").fadeIn();
-          } else if (selectedValue === "video") {
+          } else if (selectedValue === "AI Video & Content") {
             $("#videoSubTypeContainer").fadeIn();
-          } else if (selectedValue === "marketing") {
+          } else if (selectedValue === "Digital Marketing") {
             $("#marketingSubTypeContainer").fadeIn(); // New Logic
           }
         });
@@ -2104,11 +2229,11 @@
           $("#dynamicTemplateTypeContainer").hide();
           $("#ecommerceTemplateTypeContainer").hide();
 
-          if (webType === "static") {
+          if (webType === "Static Website") {
             $("#staticTemplateTypeContainer").fadeIn();
-          } else if (webType === "dynamic") {
+          } else if (webType === "Dynamic Website") {
             $("#dynamicTemplateTypeContainer").fadeIn();
-          } else if (webType === "ecommerce") {
+          } else if (webType === "E-Commerce") {
             $("#ecommerceTemplateTypeContainer").fadeIn();
           }
         });
@@ -2131,7 +2256,7 @@
           const formData = $(this).serialize();
 
           $.ajax({
-            url: "https://script.google.com/macros/s/AKfycby4JP5aIbvSZqYmBCkmZhmHe9hbarNg3frhz27cSgbayjOBj7MQw1Al1sTweA9RKLCE/exec",
+            url: "https://script.google.com/macros/s/AKfycbyXsHGNTQqhtPLs9byT52WTTJOJdHJcU32Ze8s5bqZqaZqUhZzhexO-lvNmwSZGAlAR/exec",
             method: "POST",
             data: formData,
             success: function (res) {
