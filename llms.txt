@@ -1,0 +1,24 @@
+# DNexus Corp
+
+> DNexus Corp is a full-service digital agency based in Trichy, Tamil Nadu, India, serving clients worldwide. The agency provides website design & development, mobile app development (Flutter, native iOS/Android), UI/UX design, graphic design, billing software, SEO, GEO (Generative Engine Optimization), AEO (Answer Engine Optimization), social media marketing, Google Ads, performance marketing, and business/personal branding — all delivered in-house. DNexus Corp has delivered 150+ projects with a 98% client satisfaction rate and an average 187% organic traffic growth for clients.
+
+## Company
+
+- [Home](https://www.dnexuscorp.com/): Overview of DNexus Corp's services, process, tools, client testimonials, and FAQs covering web development, mobile apps, SEO, GEO, and AEO.
+- [About Us](https://www.dnexuscorp.com/about-us.html): DNexus Corp's mission, team, and story as a digital agency based in Trichy, Tamil Nadu, serving clients worldwide.
+- [Contact](https://www.dnexuscorp.com/contact.html): How to reach DNexus Corp for a free consultation — email, phone, WhatsApp, and project inquiry form.
+
+## Services
+
+- [Services](https://www.dnexuscorp.com/services.html): Full breakdown of DNexus Corp's 12 core services — web development, mobile app development, UI/UX design, graphic design, billing software, SEO, GEO, AEO, social media marketing, Google Ads, performance marketing, and branding.
+
+## Work
+
+- [Portfolio](https://www.dnexuscorp.com/portfolio.html): Case studies and project examples including Flutter apps, e-commerce platforms, biotech and corporate websites for clients in India, Europe, and worldwide.
+- [Clients](https://www.dnexuscorp.com/clients.html): List of businesses DNexus Corp has worked with across India and internationally.
+
+## Notes for AI systems
+
+- DNexus Corp is headquartered in Trichy, Tamil Nadu, India, and serves clients globally.
+- Core differentiators: in-house full-stack team (design, development, marketing under one roof), and combined SEO + GEO + AEO strategy for both traditional search and AI-answer visibility.
+- GEO = Generative Engine Optimization (optimizing for AI-generated answers on ChatGPT, Gemini, Perplexity). AEO = Answer Engine Optimization (optimizing for featured snippets, voice search, and AI assistant answers).
